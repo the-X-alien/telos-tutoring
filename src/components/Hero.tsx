@@ -33,7 +33,7 @@ export function Hero() {
           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='%23000' width='1' height='1'/%3E%3C/svg%3E"
         >
           <source
-            src="https://cdn.pixabay.com/video/2020/09/06/49028-458259092_large.mp4"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4"
             type="video/mp4"
           />
         </video>
@@ -63,7 +63,7 @@ export function Hero() {
             {HERO.badge}
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-normal tracking-[-2.5px] leading-[0.93] text-foreground">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-[-2px] leading-[0.93] text-foreground">
             {HERO.headingLine1}{" "}
             <em className="not-italic text-primary font-display italic">
               {HERO.headingAccent}

@@ -44,9 +44,9 @@ export function ScrollReveal() {
   )
 
   return (
-    <section ref={ref} className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section ref={ref} className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1200px] mx-auto">
-        <p className="text-3xl md:text-4xl lg:text-5xl font-display tracking-[-1px] leading-[1.15] text-center">
+        <p className="text-2xl sm:text-3xl md:text-4xl font-display tracking-[-1px] leading-[1.15] text-center">
           {words.map((word, i) => (
             <Word
               key={`${word}-${i}`}

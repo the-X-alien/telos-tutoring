@@ -6,14 +6,14 @@ import { AccentHeading } from "./ui/AccentHeading"
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section id="philosophy" className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <SectionLabel text={PHILOSOPHY.label} />
 
           <AccentHeading
             text={PHILOSOPHY.heading}
-            className="text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px]"
+            className="text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px]"
           />
 
           <div className="text-muted-foreground text-base md:text-lg leading-relaxed mt-8 space-y-6">

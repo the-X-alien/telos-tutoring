@@ -60,13 +60,13 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[900px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text="QUESTIONS" />
           <AccentHeading
             text="Everything you need to *know.*"
-            className="text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px]"
+            className="text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px]"
           />
           <motion.p
             {...fadeUp(0.2)}
@@ -79,7 +79,7 @@ export function FAQ() {
 
         <motion.div
           {...staggerContainer}
-          className="mt-16"
+          className="mt-12"
         >
           {FAQ_ITEMS.map((item, i) => (
             <motion.div key={i} {...staggerChild}>

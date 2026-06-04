@@ -10,13 +10,13 @@ import { LINKS } from "../lib/constants"
 
 export function Team() {
   return (
-    <section id="team" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section id="team" className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={TEAM.label} />
           <AccentHeading
             text={TEAM.heading}
-            className="text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px]"
+            className="text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px]"
           />
           <motion.p
             {...fadeUp(0.2)}
@@ -28,7 +28,7 @@ export function Team() {
 
         <motion.div
           {...staggerContainer}
-          className="grid md:grid-cols-2 gap-8 mt-16"
+          className="grid md:grid-cols-2 gap-6 mt-12"
         >
           {TEAM.founders.map((founder) => (
             <motion.div key={founder.name} {...staggerChild}>
@@ -52,9 +52,9 @@ export function Team() {
           ))}
         </motion.div>
 
-        <motion.div {...fadeUp(0.3)} className="mt-12">
+        <motion.div {...fadeUp(0.3)} className="mt-10">
           <LiquidGlassCard className="p-10 md:p-14 text-center" hover={false}>
-            <h3 className="text-3xl md:text-4xl font-display text-foreground">
+            <h3 className="text-2xl md:text-3xl font-display text-foreground">
               {TEAM.recruitment.heading}
             </h3>
             <p className="text-muted-foreground text-base max-w-2xl mx-auto mt-6 leading-relaxed">

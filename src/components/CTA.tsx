@@ -8,7 +8,7 @@ export function CTA() {
   return (
     <section
       id="join"
-      className="relative py-28 md:py-36 px-8 md:px-16 lg:px-28 overflow-hidden"
+      className="relative py-20 md:py-28 px-8 md:px-16 lg:px-28 overflow-hidden"
     >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
@@ -33,7 +33,7 @@ export function CTA() {
 
         <motion.h2
           {...fadeUp(0.1)}
-          className="text-5xl md:text-7xl lg:text-8xl font-display text-center tracking-[-2.5px] leading-[0.95]"
+          className="text-4xl md:text-5xl lg:text-6xl font-display text-center tracking-[-2px] leading-[0.95]"
           style={{ transitionDuration: "1s" }}
         >
           Find your{" "}
@@ -49,7 +49,7 @@ export function CTA() {
           {CTA_SECTION.subtitle}
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto mt-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-12">
           <motion.div
             {...fadeUp(0.25)}
             className="liquid-glass rounded-2xl p-8 md:p-10 text-center group"
@@ -99,10 +99,10 @@ export function CTA() {
           </motion.div>
         </div>
 
-        <motion.p
-          {...fadeUp(0.45)}
-          className="text-center text-muted-foreground text-sm mt-12"
-        >
+          <motion.p
+            {...fadeUp(0.45)}
+            className="text-center text-muted-foreground text-sm mt-10"
+          >
           {CTA_SECTION.trustLine}
         </motion.p>
       </div>

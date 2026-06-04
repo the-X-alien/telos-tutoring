@@ -7,19 +7,19 @@ import { AnimatedCounter } from "./ui/AnimatedCounter"
 
 export function Stats() {
   return (
-    <section className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <SectionLabel text={STATS.label} />
           <AccentHeading
             text={STATS.heading}
-            className="text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px]"
+            className="text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px]"
           />
         </div>
 
         <motion.div
           {...staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 mt-16 md:mt-20"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 mt-12 md:mt-16"
         >
           {STATS.items.map((stat) => (
             <motion.div key={stat.label} {...staggerChild}>

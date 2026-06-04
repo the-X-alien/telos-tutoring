@@ -21,13 +21,13 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Subjects() {
   return (
-    <section id="subjects" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+    <section id="subjects" className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={SUBJECTS.label} />
           <AccentHeading
             text={SUBJECTS.heading}
-            className="text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px]"
+            className="text-3xl md:text-4xl lg:text-5xl tracking-[-1.5px]"
           />
           <motion.p
             {...fadeUp(0.2)}

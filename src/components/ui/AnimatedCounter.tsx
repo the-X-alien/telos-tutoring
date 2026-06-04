@@ -31,7 +31,7 @@ export function AnimatedCounter({ target, suffix = "", label, className }: Anima
 
   return (
     <div ref={ref} className={cn("text-center", className)}>
-      <div className="text-5xl md:text-6xl lg:text-7xl font-display text-primary tracking-tight leading-none">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-display text-primary tracking-tight leading-none">
         {count}
         {suffix}
       </div>
