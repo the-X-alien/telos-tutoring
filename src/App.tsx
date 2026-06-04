@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { useScroll, useTransform, motion } from "framer-motion"
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "./components/Navbar"
 import { Hero } from "./components/Hero"
 import { Philosophy } from "./components/Philosophy"
@@ -51,6 +52,7 @@ export default function App() {
       </main>
       <Footer />
       <SpeedInsights />
+      <Analytics />
     </div>
   )
 }
