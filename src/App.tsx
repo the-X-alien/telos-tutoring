@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import { useScroll, useTransform, motion } from "framer-motion"
+import { Analytics } from "@vercel/analytics/react"
 import { Navbar } from "./components/Navbar"
 import { Hero } from "./components/Hero"
 import { Philosophy } from "./components/Philosophy"
@@ -49,6 +50,7 @@ export default function App() {
         <Scene3D><CTA /></Scene3D>
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }
