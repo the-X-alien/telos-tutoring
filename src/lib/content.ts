@@ -128,8 +128,8 @@ export const STATS = {
     { number: 100, suffix: "%", label: "Free, Always" },
   ],
   founderQuote:
-    "We started this because we remembered what it felt like to be stuck on a problem with no one to ask. Every student deserves someone in their corner.",
-  founderAttribution: "\u2014 Dhiaan & Neal, Founders",
+    "We started Telos Tutoring because we remembered what it felt like to be stuck on a math problem with no one to ask. Every student deserves someone in their corner \u2014 someone who recently learned it themselves and can explain it in a way that clicks.",
+  founderAttribution: "\u2014 Dhiaan Dave & Neal Panuganti, Co-Founders of Telos Tutoring",
 }
 
 export const TEAM = {
@@ -142,7 +142,7 @@ export const TEAM = {
       name: "Dhiaan Dave",
       title: "Co-Founder",
       initials: "DD",
-      bio: "Passionate about math and helping others discover the logic and beauty behind numbers. I started Telos because every student deserves someone who believes in them.",
+      bio: "A student at Milpitas High School passionate about mathematics, Logic Mastery, and helping younger students discover the beauty behind numbers. As Co-Founder of Telos Tutoring, Dhiaan leads operations, tutor training, and community outreach to make free peer tutoring accessible to every K-8 student in the Bay Area.",
     },
     {
       name: "Neal Panuganti",

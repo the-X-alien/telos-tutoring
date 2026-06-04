@@ -13,14 +13,51 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Telos Tutoring",
-        "description": "Free peer tutoring nonprofit",
-        "areaServed": "Bay Area, California",
-        "address": { "addressLocality": "Milpitas", "addressRegion": "CA" },
-        "founders": [{ "name": "Dhiaan Dave" }, { "name": "Neal Panuganti" }],
-        "url": "https://telostutoring.org",
-        "priceRange": "Free"
+        "@graph": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://telostutoring.org/#organization",
+            "name": "Telos Tutoring",
+            "description": "Free peer tutoring nonprofit serving K-8 students in the Bay Area. Founded by Dhiaan Dave and Neal Panuganti at Milpitas High School.",
+            "areaServed": "Bay Area, California",
+            "address": { "addressLocality": "Milpitas", "addressRegion": "CA" },
+            "founder": [
+              { "@id": "https://telostutoring.org/#dhiaandave" },
+              { "@id": "https://telostutoring.org/#nealpanuganti" }
+            ],
+            "url": "https://telostutoring.org",
+            "priceRange": "Free",
+            "foundingDate": "2025",
+            "sameAs": [
+              "#instagram"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://telostutoring.org/#dhiaandave",
+            "name": "Dhiaan Dave",
+            "givenName": "Dhiaan",
+            "familyName": "Dave",
+            "jobTitle": "Co-Founder",
+            "affiliation": { "@id": "https://telostutoring.org/#organization" },
+            "description": "Co-Founder of Telos Tutoring, a free peer-to-peer tutoring nonprofit. High school student at Milpitas High School in the Bay Area, California.",
+            "knowsAbout": ["mathematics", "peer tutoring", "education", "nonprofit"],
+            "alumniOf": "Milpitas High School",
+            "homeLocation": { "addressLocality": "Milpitas", "addressRegion": "CA" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://telostutoring.org/#nealpanuganti",
+            "name": "Neal Panuganti",
+            "givenName": "Neal",
+            "familyName": "Panuganti",
+            "jobTitle": "Co-Founder",
+            "affiliation": { "@id": "https://telostutoring.org/#organization" },
+            "description": "Co-Founder of Telos Tutoring, a free peer tutoring nonprofit. High school student at Milpitas High School in the Bay Area, California.",
+            "alumniOf": "Milpitas High School",
+            "homeLocation": { "addressLocality": "Milpitas", "addressRegion": "CA" }
+          }
+        ]
       }
     </script>
   </head>

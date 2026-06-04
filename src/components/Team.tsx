@@ -38,7 +38,7 @@ export function Team() {
                     {founder.initials}
                   </span>
                 </div>
-                <h3 className={`text-2xl font-display ${founder.name === "Dhiaan Dave" ? "text-primary" : "text-foreground"}`}>
+                <h3 className="text-2xl font-display text-foreground">
                   {founder.name}
                 </h3>
                 <p className="text-primary text-sm mt-1 font-body">

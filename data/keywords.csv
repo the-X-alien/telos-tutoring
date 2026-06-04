@@ -1,4 +1,29 @@
 keyword,volume,intent
+dhiaan dave,50,navigational
+dhiaan dave telos tutoring,20,navigational
+dhiaan dave milpitas,10,navigational
+dhiaan dave founder,10,navigational
+dhiaan dave tutor,20,navigational
+dhiaan dave bay area,10,navigational
+dhiaan dave high school,10,navigational
+dhiaan dave nonprofit,10,navigational
+dhiaan dave community service,10,navigational
+dhiaan dave peer tutoring,10,navigational
+dhiaan dave cofounder,10,navigational
+dhiaan dave student,10,navigational
+dhiaan dave california,10,navigational
+dhiaan dave linkedin,30,navigational
+dhiaan dave instagram,20,navigational
+dhiaan dave email,10,navigational
+neal panuganti,50,navigational
+neal panuganti telos tutoring,10,navigational
+neal panuganti cofounder,10,navigational
+telos tutoring,100,navigational
+telos tutoring milpitas,50,navigational
+telos tutoring bay area,80,navigational
+telos tutoring free,60,navigational
+telos tutoring review,40,commercial
+telos tutoring founders,30,navigational
 free tutoring bay area,3200,commercial
 free peer tutoring,1800,informational
 k-8 tutoring bay area,2400,commercial
@@ -47,6 +72,8 @@ free study skills tutoring,600,informational
 how to become a peer tutor,1200,informational
 high school volunteer opportunities,9800,commercial
 free test prep for kids,1600,commercial
-telos tutoring,100,navigational
-dhiaan dave,50,navigational
-neal panuganti,50,navigational
+milpitas high school student tutor,150,commercial
+teen led nonprofit bay area,500,informational
+student founded nonprofit,800,informational
+youth tutoring program bay area,1200,commercial
+high school student founder,400,informational
