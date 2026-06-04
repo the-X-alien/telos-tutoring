@@ -142,13 +142,13 @@ export const TEAM = {
       name: "Dhiaan Dave",
       title: "Co-Founder",
       initials: "DD",
-      bio: "A student at Milpitas High School passionate about mathematics, Logic Mastery, and helping younger students discover the beauty behind numbers. As Co-Founder of Telos Tutoring, Dhiaan leads operations, tutor training, and community outreach to make free peer tutoring accessible to every K-8 student in the Bay Area.",
+      bio: "A 13-year-old student who codes, builds PCBs, tinkers with CAD, organizes hackathons through Wolverine Hacks, and believes learning is a journey of discovery, not a checklist. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination — making sure every K-8 student in the Bay Area has someone to explore the world alongside.",
     },
     {
       name: "Neal Panuganti",
       title: "Co-Founder",
       initials: "NP",
-      bio: "I believe that learning should be a journey of discovery, not a chore. Telos is about helping younger students find the same joy in learning that I've found.",
+      bio: "A student at Milpitas High School who fell in love with the logic and beauty behind numbers — and wants every younger student to experience that same spark. As Co-Founder of Telos Tutoring, Neal leads curriculum design and math acceleration programming, helping students build confidence and get ahead of their grade level through peer-to-peer mentorship.",
     },
   ],
   recruitment: {
