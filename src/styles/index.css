@@ -1,0 +1,37 @@
+@import './fonts.css';
+@import './theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 45 20% 95%;
+    --card: 220 15% 7%;
+    --card-foreground: 45 20% 95%;
+    --primary: 43 80% 55%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 10% 12%;
+    --secondary-foreground: 45 10% 75%;
+    --muted: 220 10% 15%;
+    --muted-foreground: 40 5% 55%;
+    --accent: 43 80% 55%;
+    --accent-foreground: 220 20% 4%;
+    --border: 40 5% 15%;
+    --input: 220 10% 12%;
+    --ring: 43 60% 45%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
