@@ -6,7 +6,7 @@ import { AccentHeading } from "./ui/AccentHeading"
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-32 md:py-44 px-8 md:px-16 lg:px-28">
+    <section id="how-it-works" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={HOW_IT_WORKS.label} />
@@ -22,10 +22,10 @@ export function HowItWorks() {
           </motion.p>
         </div>
 
-        <div className="relative mt-20 md:mt-28">
+        <div className="relative mt-12 md:mt-16">
           <div className="absolute left-[29px] md:left-1/2 top-0 bottom-0 w-px bg-border/30 md:-translate-x-px" />
 
-          <div className="space-y-16 md:space-y-24">
+          <div className="space-y-12 md:space-y-16">
             {HOW_IT_WORKS.steps.map((step, i) => {
               const isLeft = i % 2 === 0
               return (

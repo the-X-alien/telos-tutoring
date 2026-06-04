@@ -8,7 +8,7 @@ export function CTA() {
   return (
     <section
       id="join"
-      className="relative py-40 md:py-52 px-8 md:px-16 lg:px-28 overflow-hidden"
+      className="relative py-28 md:py-36 px-8 md:px-16 lg:px-28 overflow-hidden"
     >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />

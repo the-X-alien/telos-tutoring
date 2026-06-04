@@ -7,7 +7,7 @@ import { AnimatedCounter } from "./ui/AnimatedCounter"
 
 export function Stats() {
   return (
-    <section className="py-32 md:py-44 px-8 md:px-16 lg:px-28">
+    <section className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <SectionLabel text={STATS.label} />
@@ -32,7 +32,7 @@ export function Stats() {
           ))}
         </motion.div>
 
-        <div className="max-w-3xl mx-auto text-center mt-20 md:mt-28 pt-12 border-t border-border/20">
+        <div className="max-w-3xl mx-auto text-center mt-16 md:mt-20 pt-10 border-t border-border/20">
           <motion.blockquote {...fadeUp(0)}>
             <p className="text-foreground text-lg md:text-xl font-display italic leading-relaxed">
               &ldquo;{STATS.founderQuote}&rdquo;

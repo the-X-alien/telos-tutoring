@@ -6,8 +6,8 @@ import { AccentHeading } from "./ui/AccentHeading"
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="py-32 md:py-44 px-8 md:px-16 lg:px-28">
-      <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+    <section id="philosophy" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
+      <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <SectionLabel text={PHILOSOPHY.label} />
 

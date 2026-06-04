@@ -10,7 +10,7 @@ import { LINKS } from "../lib/constants"
 
 export function Team() {
   return (
-    <section id="team" className="py-32 md:py-44 px-8 md:px-16 lg:px-28">
+    <section id="team" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={TEAM.label} />

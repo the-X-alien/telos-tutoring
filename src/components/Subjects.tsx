@@ -21,7 +21,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Subjects() {
   return (
-    <section id="subjects" className="py-32 md:py-44 px-8 md:px-16 lg:px-28">
+    <section id="subjects" className="py-24 md:py-32 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={SUBJECTS.label} />
