@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Mail, Globe } from "lucide-react"
 import { LINKS } from "../lib/constants"
 
@@ -9,7 +10,7 @@ export function Footer() {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           <div>
-            <a href="#home" className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2.5">
               <div className="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center">
                 <span className="text-primary font-display text-sm">T</span>
               </div>
@@ -19,7 +20,7 @@ export function Footer() {
               <span className="text-xl tracking-tight font-display text-muted-foreground">
                 Tutoring
               </span>
-            </a>
+            </Link>
             <p className="text-muted-foreground text-sm mt-3">
               Every student has a purpose.
             </p>
@@ -34,17 +35,12 @@ export function Footer() {
               Navigate
             </h4>
             <div className="flex flex-col gap-2">
-              {["Home", "Philosophy", "Subjects", "How It Works", "Team", "Join Us"].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    {link}
-                  </a>
-                )
-              )}
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Home</Link>
+              <Link to="/philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Philosophy</Link>
+              <Link to="/subjects" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Subjects</Link>
+              <Link to="/how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">How It Works</Link>
+              <Link to="/team" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Team</Link>
+              <Link to="/join" className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">Join Us</Link>
             </div>
           </div>
 
