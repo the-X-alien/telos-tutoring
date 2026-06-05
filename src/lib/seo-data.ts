@@ -22,6 +22,7 @@ export const CATEGORIES = [
   { slug: "local-area-tutoring-competition", name: "Local Area Tutoring & Competition", description: "Local tutoring centers and academic competition preparation in Milpitas." },
   { slug: "general-musd-tutoring", name: "General MUSD Tutoring Services", description: "General tutoring services available to all MUSD students across grade levels and subjects." },
   { slug: "musd-alumni-college-prep-career", name: "MUSD Alumni, College Prep & Career Pathways", description: "College preparation, SAT/ACT prep, career pathway guidance, and alumni support." },
+  { slug: "musd-volunteer-community", name: "MUSD Volunteer & Community Support", description: "Volunteer tutor opportunities, community engagement, and donation support for Telos Tutoring." },
 ]
 
 const PILLAR_SLUG = "musd-math-acceleration-tutoring-milpitas"
@@ -715,6 +716,13 @@ export const ALL_PAGES: Record<string, SEOPage> = {
   ["milpitas-schools-academic-coaching"]: stub("milpitas-schools-academic-coaching", "Milpitas Schools Academic Coaching", "general-musd-tutoring"),
   ["musd-growth-mindset-help"]: stub("musd-growth-mindset-help", "MUSD Growth Mindset for Students", "general-musd-tutoring"),
   ["musd-grades-help"]: stub("musd-grades-help", "MUSD Grades Help", "general-musd-tutoring"),
+  ["esl-tutoring-milpitas"]: stub("esl-tutoring-milpitas", "ESL Tutoring for MUSD Students", "general-musd-tutoring"),
+  ["creative-writing-tutoring-k8-milpitas"]: stub("creative-writing-tutoring-k8-milpitas", "Creative Writing Tutoring for K-8 Students in Milpitas", "general-musd-tutoring"),
+  ["coding-computer-science-tutoring-k8"]: stub("coding-computer-science-tutoring-k8", "Coding & Computer Science Tutoring for K-8 Students", "general-musd-tutoring"),
+  ["reading-literacy-tutoring-milpitas"]: stub("reading-literacy-tutoring-milpitas", "Reading & Literacy Tutoring in Milpitas", "general-musd-tutoring"),
+  ["common-core-math-help-milpitas"]: stub("common-core-math-help-milpitas", "Common Core Math Help in Milpitas for K-8 Students", "general-musd-tutoring"),
+  ["summer-enrichment-program-milpitas"]: stub("summer-enrichment-program-milpitas", "Summer Enrichment Program for MUSD Students", "general-musd-tutoring"),
+  ["mindfulness-confidence-tutoring-milpitas"]: stub("mindfulness-confidence-tutoring-milpitas", "Mindfulness & Confidence Building Tutoring in Milpitas", "general-musd-tutoring"),
 
   // College Prep
   ["musd-college-application-help"]: stub("musd-college-application-help", "MUSD College Application Help", "musd-alumni-college-prep-career"),
@@ -730,6 +738,12 @@ export const ALL_PAGES: Record<string, SEOPage> = {
   ["musd-transcript-help"]: stub("musd-transcript-help", "MUSD Transcript Help", "musd-alumni-college-prep-career"),
   ["musd-college-interview-prep"]: stub("musd-college-interview-prep", "MUSD College Interview Prep", "musd-alumni-college-prep-career"),
   ["milpitas-high-school-career-center"]: stub("milpitas-high-school-career-center", "Milpitas High School Career Center", "musd-alumni-college-prep-career"),
+
+  // Volunteer & Community
+  ["volunteer-tutor-milpitas"]: stub("volunteer-tutor-milpitas", "Volunteer Tutor Opportunities at Telos Tutoring", "musd-volunteer-community"),
+  ["donate-support-telos-tutoring"]: stub("donate-support-telos-tutoring", "Donate to Support Free Peer Tutoring in Milpitas", "musd-volunteer-community"),
+  ["community-partnerships-milpitas-tutoring"]: stub("community-partnerships-milpitas-tutoring", "Community Partnerships for Free Tutoring in Milpitas", "musd-volunteer-community"),
+  ["tutor-mentor-program-milpitas"]: stub("tutor-mentor-program-milpitas", "Tutor Mentor Program for MUSD Students", "musd-volunteer-community"),
 }
 
 export function getPagesByCategory(category: string): SEOPage[] {
