@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { Routes, Route, Navigate } from "react-router-dom"
 import { useScroll, useTransform, motion } from "framer-motion"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Navbar } from "./components/Navbar"
@@ -12,6 +13,8 @@ import { Team } from "./components/Team"
 import { FAQ } from "./components/FAQ"
 import { CTA } from "./components/CTA"
 import { Footer } from "./components/Footer"
+import { Helmet } from "./components/Helmet"
+import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
 
 function Scene3D({ children }: { children: React.ReactNode }) {
   const ref = useRef(null)
@@ -34,9 +37,10 @@ function Scene3D({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default function App() {
+function HomePage() {
   return (
-    <div className="bg-background text-foreground min-h-screen font-body" style={{ perspective: "1200px" }}>
+    <>
+      <Helmet title="Telos Tutoring – Free Peer Tutoring for K-8 Students in the Bay Area" description="Telos (τέλος) means purpose. We're a free peer tutoring nonprofit helping K-8 students in the Bay Area discover theirs. Founded by students at Milpitas High School." />
       <Navbar />
       <main>
         <Hero />
@@ -50,6 +54,20 @@ export default function App() {
         <Scene3D><CTA /></Scene3D>
       </main>
       <Footer />
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <div className="bg-background text-foreground min-h-screen font-body" style={{ perspective: "1200px" }}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/guide" element={<GuideIndex />} />
+        <Route path="/guide/category/:categorySlug" element={<CategoryPage />} />
+        <Route path="/guide/:slug" element={<GuidePage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
       <SpeedInsights />
     </div>
   )
