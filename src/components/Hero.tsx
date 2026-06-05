@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { Link } from "react-router-dom"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { HERO } from "../lib/content"
@@ -77,18 +76,18 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mt-8">
-            <Link
-              to="/join"
+            <a
+              href="#join"
               className="bg-primary text-primary-foreground rounded-full px-8 py-3.5 text-sm sm:text-base font-medium gold-glow hover:scale-[1.03] transition-transform duration-200"
             >
               {HERO.ctaPrimary}
-            </Link>
-            <Link
-              to="/philosophy"
+            </a>
+            <a
+              href="#philosophy"
               className="liquid-glass text-foreground text-sm sm:text-base font-medium px-8 py-3.5 rounded-full hover:text-primary transition-colors duration-200"
             >
               {HERO.ctaSecondary}
-            </Link>
+            </a>
           </div>
         </motion.div>
       </motion.div>

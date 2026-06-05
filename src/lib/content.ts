@@ -1,12 +1,11 @@
 export const NAV = {
   links: [
-    { label: "Home", href: "/" },
-    { label: "Philosophy", href: "/philosophy" },
-    { label: "Subjects", href: "/subjects" },
-    { label: "How It Works", href: "/how-it-works" },
-    { label: "Team", href: "/team" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Join Us", href: "/join" },
+    { label: "Home", href: "#home" },
+    { label: "Philosophy", href: "#philosophy" },
+    { label: "Subjects", href: "#subjects" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Team", href: "#team" },
+    { label: "Join Us", href: "#join" },
   ],
   cta: "Start Learning",
 }
