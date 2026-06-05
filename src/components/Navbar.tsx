@@ -1,7 +1,70 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu } from "lucide-react"
 import { NAV } from "../lib/content"
+
+function NavItem({ label, href, onClick }: { label: string; href: string; onClick?: () => void }) {
+  if (href.startsWith("/")) {
+    return (
+      <Link
+        to={href}
+        onClick={onClick}
+        className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+          label === "Home"
+            ? "bg-white/15 text-foreground"
+            : "text-muted-foreground/70 hover:text-foreground"
+        }`}
+      >
+        {label}
+      </Link>
+    )
+  }
+  return (
+    <a
+      href={href}
+      onClick={onClick}
+      className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
+        label === "Home"
+          ? "bg-white/15 text-foreground"
+          : "text-muted-foreground/70 hover:text-foreground"
+      }`}
+    >
+      {label}
+    </a>
+  )
+}
+
+function NavItemMobile({ label, href, onClick }: { label: string; href: string; onClick?: () => void }) {
+  if (href.startsWith("/")) {
+    return (
+      <Link
+        to={href}
+        onClick={onClick}
+        className={`flex items-center justify-between w-full px-4 py-3 rounded-lg text-sm transition-colors ${
+          label === "Home"
+            ? "bg-white/10 text-foreground"
+            : "text-muted-foreground/70 hover:text-foreground"
+        }`}
+      >
+        {label}
+      </Link>
+    )
+  }
+  return (
+    <a
+      href={href}
+      onClick={onClick}
+      className={`flex items-center justify-between w-full px-4 py-3 rounded-lg text-sm transition-colors ${
+        label === "Home"
+          ? "bg-white/10 text-foreground"
+          : "text-muted-foreground/70 hover:text-foreground"
+      }`}
+    >
+      {label}
+    </a>
+  )
+}
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -24,17 +87,7 @@ export function Navbar() {
 
           <div className="hidden md:flex liquid-glass items-center gap-1 rounded-xl px-2 py-2">
             {NAV.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className={`px-3 py-1.5 rounded-md text-sm transition-colors ${
-                  link.label === "Home"
-                    ? "bg-white/15 text-foreground"
-                    : "text-muted-foreground/70 hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </a>
+              <NavItem key={link.label} label={link.label} href={link.href} />
             ))}
           </div>
 
@@ -73,18 +126,12 @@ export function Navbar() {
             className="fixed top-[68px] left-4 right-4 z-40 md:hidden liquid-glass rounded-2xl p-4 flex flex-col gap-1"
           >
             {NAV.links.map((link) => (
-              <a
+              <NavItemMobile
                 key={link.label}
+                label={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className={`flex items-center justify-between w-full px-4 py-3 rounded-lg text-sm transition-colors ${
-                  link.label === "Home"
-                    ? "bg-white/10 text-foreground"
-                    : "text-muted-foreground/70 hover:text-foreground"
-                }`}
-              >
-                {link.label}
-              </a>
+              />
             ))}
             <div className="flex gap-2 mt-2 pt-3 border-t border-white/10">
               <a

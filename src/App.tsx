@@ -16,6 +16,39 @@ import { Footer } from "./components/Footer"
 import { Helmet } from "./components/Helmet"
 import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
 
+function SponsorsPage() {
+  return (
+    <>
+      <Helmet title="Sponsors – Telos Tutoring" description="Support Telos Tutoring's free peer tutoring program. Sponsor our mission to help K-8 students in the Bay Area discover their purpose." />
+      <Navbar />
+      <main className="min-h-screen flex items-center justify-center px-8">
+        <div className="text-center max-w-lg">
+          <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center mx-auto mb-8">
+            <span className="text-2xl text-primary font-display">S</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-display text-foreground tracking-[-1px] mb-4">
+            Sponsors
+          </h1>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-2">
+            We're building something meaningful — free peer tutoring for every K-8 student in the Bay Area.
+          </p>
+          <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-6 py-3 mt-4">
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-primary font-medium text-sm tracking-wide">Coming Soon</span>
+          </div>
+          <p className="text-muted-foreground/60 text-sm mt-8 max-w-sm mx-auto leading-relaxed">
+            Interested in sponsoring? Reach out to us at{" "}
+            <a href="mailto:telostutoring@gmail.com" className="text-primary hover:underline">
+              telostutoring@gmail.com
+            </a>
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+
 function Scene3D({ children }: { children: React.ReactNode }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -66,6 +99,7 @@ export default function App() {
         <Route path="/guide" element={<GuideIndex />} />
         <Route path="/guide/category/:categorySlug" element={<CategoryPage />} />
         <Route path="/guide/:slug" element={<GuidePage />} />
+        <Route path="/sponsors" element={<SponsorsPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <SpeedInsights />

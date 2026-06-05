@@ -5,6 +5,8 @@ export const NAV = {
     { label: "Subjects", href: "#subjects" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Team", href: "#team" },
+    { label: "Guides", href: "/guide" },
+    { label: "Sponsors", href: "/sponsors" },
     { label: "Join Us", href: "#join" },
   ],
   cta: "Start Learning",
