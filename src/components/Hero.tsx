@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { HERO } from "../lib/content"
@@ -16,16 +16,31 @@ export function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 120])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
-  const startAudio = () => {
-    const audio = audioRef.current
+  useEffect(() => {
     const video = videoRef.current
-    if (!audio || !video) return
-    if (video.readyState >= 2) {
-      audio.volume = 0.15
-      audio.currentTime = 42
-      audio.play().catch(() => {})
+    const audio = audioRef.current
+    if (!video || !audio) return
+
+    audio.volume = 0.15
+
+    const onVideoPlay = () => {
+      const tryPlay = () => {
+        if (audio.readyState >= 2) {
+          audio.currentTime = 42
+          audio.play().catch(() => {})
+        } else {
+          audio.addEventListener("loadedmetadata", () => {
+            audio.currentTime = 42
+            audio.play().catch(() => {})
+          }, { once: true })
+        }
+      }
+      tryPlay()
     }
-  }
+
+    video.addEventListener("play", onVideoPlay)
+    return () => video.removeEventListener("play", onVideoPlay)
+  }, [])
 
   return (
     <section
@@ -42,7 +57,6 @@ export function Hero() {
           autoPlay
           muted
           playsInline
-          onPlaying={startAudio}
           className="absolute inset-0 w-full h-full object-cover"
           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='%23000' width='1' height='1'/%3E%3C/svg%3E"
         >
