@@ -127,11 +127,13 @@ export function Hero() {
 
       <audio
         ref={audioRef}
-        src="/golden-hour-instrumental.webm"
         preload="auto"
         loop
         muted
-      />
+      >
+        <source src="/golden-hour-instrumental.m4a" type="audio/mp4" />
+        <source src="/golden-hour-instrumental.webm" type="audio/webm" />
+      </audio>
 
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
