@@ -17,29 +17,33 @@ export function Hero() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
   useEffect(() => {
-    const video = videoRef.current
     const audio = audioRef.current
-    if (!video || !audio) return
+    if (!audio) return
 
     audio.volume = 0.15
 
-    const onVideoPlay = () => {
-      const tryPlay = () => {
-        if (audio.readyState >= 2) {
-          audio.currentTime = 42
-          audio.play().catch(() => {})
-        } else {
-          audio.addEventListener("loadedmetadata", () => {
-            audio.currentTime = 42
-            audio.play().catch(() => {})
-          }, { once: true })
-        }
-      }
-      tryPlay()
+    const seekAndPlay = () => {
+      audio.currentTime = 42
+      audio.play().catch(() => {})
     }
 
-    video.addEventListener("play", onVideoPlay)
-    return () => video.removeEventListener("play", onVideoPlay)
+    if (audio.readyState >= 2) {
+      seekAndPlay()
+    } else {
+      audio.addEventListener("loadedmetadata", seekAndPlay, { once: true })
+    }
+
+    const unmute = () => {
+      audio.muted = false
+      document.removeEventListener("click", unmute)
+      document.removeEventListener("touchstart", unmute)
+    }
+    document.addEventListener("click", unmute)
+    document.addEventListener("touchstart", unmute)
+    return () => {
+      document.removeEventListener("click", unmute)
+      document.removeEventListener("touchstart", unmute)
+    }
   }, [])
 
   return (
