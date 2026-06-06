@@ -1,10 +1,12 @@
-import { useRef } from "react"
+import { useRef, useEffect, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Volume2, VolumeX } from "lucide-react"
 import { HERO } from "../lib/content"
 
 export function Hero() {
   const ref = useRef(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const [muted, setMuted] = useState(true)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -13,6 +15,30 @@ export function Hero() {
   const videoOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3])
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 120])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
+
+  useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+    audio.volume = 0.15
+    const onLoaded = () => {
+      audio.currentTime = 42
+      audio.play().catch(() => {})
+    }
+    audio.addEventListener("loadedmetadata", onLoaded)
+    const onFirstInteraction = () => {
+      audio.muted = false
+      setMuted(false)
+      document.removeEventListener("click", onFirstInteraction)
+      document.removeEventListener("touchstart", onFirstInteraction)
+    }
+    document.addEventListener("click", onFirstInteraction)
+    document.addEventListener("touchstart", onFirstInteraction)
+    return () => {
+      audio.removeEventListener("loadedmetadata", onLoaded)
+      document.removeEventListener("click", onFirstInteraction)
+      document.removeEventListener("touchstart", onFirstInteraction)
+    }
+  }, [])
 
   return (
     <section
@@ -91,6 +117,27 @@ export function Hero() {
           </div>
         </motion.div>
       </motion.div>
+
+      <audio
+        ref={audioRef}
+        src="/golden-hour-instrumental.webm"
+        preload="auto"
+        loop
+        muted
+      />
+
+      <button
+        onClick={() => {
+          const a = audioRef.current
+          if (!a) return
+          a.muted = !a.muted
+          setMuted(a.muted)
+        }}
+        className="absolute top-24 right-8 z-30 w-10 h-10 rounded-full liquid-glass flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+        aria-label={muted ? "Unmute audio" : "Mute audio"}
+      >
+        {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+      </button>
 
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
