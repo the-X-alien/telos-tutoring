@@ -1,12 +1,12 @@
-import { useRef, useEffect, useState } from "react"
+import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronDown, Volume2, VolumeX } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { HERO } from "../lib/content"
 
 export function Hero() {
   const ref = useRef(null)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const [muted, setMuted] = useState(true)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -16,29 +16,16 @@ export function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 120])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
-  useEffect(() => {
+  const startAudio = () => {
     const audio = audioRef.current
-    if (!audio) return
-    audio.volume = 0.15
-    const onLoaded = () => {
+    const video = videoRef.current
+    if (!audio || !video) return
+    if (video.readyState >= 2) {
+      audio.volume = 0.15
       audio.currentTime = 42
       audio.play().catch(() => {})
     }
-    audio.addEventListener("loadedmetadata", onLoaded)
-    const onFirstInteraction = () => {
-      audio.muted = false
-      setMuted(false)
-      document.removeEventListener("click", onFirstInteraction)
-      document.removeEventListener("touchstart", onFirstInteraction)
-    }
-    document.addEventListener("click", onFirstInteraction)
-    document.addEventListener("touchstart", onFirstInteraction)
-    return () => {
-      audio.removeEventListener("loadedmetadata", onLoaded)
-      document.removeEventListener("click", onFirstInteraction)
-      document.removeEventListener("touchstart", onFirstInteraction)
-    }
-  }, [])
+  }
 
   return (
     <section
@@ -51,9 +38,11 @@ export function Hero() {
         style={{ scale: videoScale, opacity: videoOpacity }}
       >
         <video
+          ref={videoRef}
           autoPlay
           muted
           playsInline
+          onPlaying={startAudio}
           className="absolute inset-0 w-full h-full object-cover"
           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='%23000' width='1' height='1'/%3E%3C/svg%3E"
         >
@@ -125,19 +114,6 @@ export function Hero() {
         loop
         muted
       />
-
-      <button
-        onClick={() => {
-          const a = audioRef.current
-          if (!a) return
-          a.muted = !a.muted
-          setMuted(a.muted)
-        }}
-        className="absolute top-24 right-8 z-30 w-10 h-10 rounded-full liquid-glass flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
-        aria-label={muted ? "Unmute audio" : "Mute audio"}
-      >
-        {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-      </button>
 
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
