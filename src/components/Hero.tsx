@@ -22,27 +22,31 @@ export function Hero() {
 
     audio.volume = 0.15
 
-    const seekAndPlay = () => {
+    const play = async () => {
       audio.currentTime = 42
-      audio.play().catch(() => {})
+      try {
+        await audio.play()
+        audio.muted = false
+      } catch {}
     }
 
     if (audio.readyState >= 2) {
-      seekAndPlay()
+      play()
     } else {
-      audio.addEventListener("loadedmetadata", seekAndPlay, { once: true })
+      audio.addEventListener("loadedmetadata", play, { once: true })
     }
 
-    const unmute = () => {
+    const onClick = () => {
       audio.muted = false
-      document.removeEventListener("click", unmute)
-      document.removeEventListener("touchstart", unmute)
+      audio.play().catch(() => {})
+      document.removeEventListener("click", onClick)
+      document.removeEventListener("touchstart", onClick)
     }
-    document.addEventListener("click", unmute)
-    document.addEventListener("touchstart", unmute)
+    document.addEventListener("click", onClick)
+    document.addEventListener("touchstart", onClick)
     return () => {
-      document.removeEventListener("click", unmute)
-      document.removeEventListener("touchstart", unmute)
+      document.removeEventListener("click", onClick)
+      document.removeEventListener("touchstart", onClick)
     }
   }, [])
 
@@ -64,10 +68,7 @@ export function Hero() {
           className="absolute inset-0 w-full h-full object-cover"
           poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect fill='%23000' width='1' height='1'/%3E%3C/svg%3E"
         >
-          <source
-            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4"
-            type="video/mp4"
-          />
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
