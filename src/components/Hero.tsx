@@ -27,7 +27,11 @@ export function Hero() {
       try {
         await audio.play()
         audio.muted = false
-      } catch {}
+      } catch {
+        audio.muted = true
+        audio.currentTime = 42
+        audio.play().catch(() => {})
+      }
     }
 
     if (audio.readyState >= 2) {
@@ -38,6 +42,7 @@ export function Hero() {
 
     const onClick = () => {
       audio.muted = false
+      audio.currentTime = 42
       audio.play().catch(() => {})
       document.removeEventListener("click", onClick)
       document.removeEventListener("touchstart", onClick)
