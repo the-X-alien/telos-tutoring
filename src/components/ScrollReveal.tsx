@@ -40,7 +40,7 @@ export function ScrollReveal() {
   const words = useMemo(() => SCROLL_REVEAL_TEXT.split(" "), [])
 
   return (
-    <section ref={containerRef} className="relative" style={{ height: "450vh" }}>
+    <section ref={containerRef} className="relative" style={{ height: "600vh" }}>
       <div className="sticky top-0 h-screen flex items-center justify-center px-8 md:px-16 lg:px-28">
         <div className="max-w-[900px]">
           <p className="text-2xl sm:text-3xl md:text-4xl font-display tracking-[-1px] leading-[1.15] text-center">
