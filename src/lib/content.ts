@@ -144,7 +144,7 @@ export const TEAM = {
       name: "Dhiaan Dave",
       title: "Co-Founder",
       initials: "DD",
-      bio: "A 13-year-old student at Thomas Russell Middle School who organizes hackathons through Wolverine Hacks, builds projects with Python and React, and believes the best way to learn is to build something real. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination.",
+      bio: "A student at Milpitas High School who organizes hackathons through Wolverine Hacks, builds projects with Python and React, and believes the best way to learn is to build something real. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination.",
     },
     {
       name: "Neal Panuganti",
