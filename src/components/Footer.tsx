@@ -114,10 +114,29 @@ export function Footer() {
             &copy; {year} Telos Tutoring. All rights reserved.
           </p>
           <p className="text-muted-foreground/30 text-xs">
-            Built with purpose in Milpitas, CA
+            made with &lt;3 by{" "}
+            <a
+              href={LINKS.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground/50 hover:text-foreground transition-colors"
+            >
+              the-X-alien
+            </a>{" "}
+            ({" "}
+            <a
+              href={LINKS.linkedinDhiaan}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground/50 hover:text-foreground transition-colors"
+            >
+              Dhiaan Dave
+            </a>{" "}
+            )
           </p>
           <p className="text-muted-foreground/50 text-xs">
-            Privacy Policy &middot; Terms
+            <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a> &middot;{" "}
+            <a href="/terms" className="hover:text-foreground transition-colors">Terms</a>
           </p>
         </div>
       </div>

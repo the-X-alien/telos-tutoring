@@ -39,7 +39,25 @@ export function Team() {
                   </span>
                 </div>
                 <h3 className="text-2xl font-display text-foreground">
-                  {founder.name}
+                  {founder.name === "Dhiaan Dave" ? (
+                    <a
+                      href={LINKS.linkedinDhiaan}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {founder.name}
+                    </a>
+                  ) : (
+                    <a
+                      href={LINKS.linkedinNeal}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {founder.name}
+                    </a>
+                  )}
                 </h3>
                 <p className="text-primary text-sm mt-1 font-body">
                   {founder.title}

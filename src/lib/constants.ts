@@ -4,4 +4,7 @@ export const LINKS = {
   email: "mailto:telostutoring@outlook.com",
   instagram: "#instagram",
   domain: "https://telostutoring.org",
+  github: "https://github.com/the-X-alien",
+  linkedinDhiaan: "https://www.linkedin.com/in/dhiaan/",
+  linkedinNeal: "https://www.linkedin.com/in/neal-panuganti-6079823ba/",
 } as const
