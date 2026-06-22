@@ -38,8 +38,8 @@ function SponsorsPage() {
           </div>
           <p className="text-muted-foreground/60 text-sm mt-8 max-w-sm mx-auto leading-relaxed">
             Interested in sponsoring? Reach out to us at{" "}
-            <a href="mailto:telostutoring@gmail.com" className="text-primary hover:underline">
-              telostutoring@gmail.com
+            <a href="mailto:telostutoring@outlook.com" className="text-primary hover:underline">
+              telostutoring@outlook.com
             </a>
           </p>
         </div>

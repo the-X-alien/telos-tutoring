@@ -144,13 +144,13 @@ export const TEAM = {
       name: "Dhiaan Dave",
       title: "Co-Founder",
       initials: "DD",
-      bio: "A 13-year-old student who codes, builds PCBs, tinkers with CAD, organizes hackathons through Wolverine Hacks, and believes learning is a journey of discovery, not a checklist. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination — making sure every K-8 student in the Bay Area has someone to explore the world alongside.",
+      bio: "A 13-year-old student at Thomas Russell Middle School who organizes hackathons through Wolverine Hacks, builds projects with Python and React, and believes the best way to learn is to build something real. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination.",
     },
     {
       name: "Neal Panuganti",
       title: "Co-Founder",
       initials: "NP",
-      bio: "A student at Milpitas High School who fell in love with the logic and beauty behind numbers — and wants every younger student to experience that same spark. As Co-Founder of Telos Tutoring, Neal leads curriculum design and math acceleration programming, helping students build confidence and get ahead of their grade level through peer-to-peer mentorship.",
+      bio: "A student at Milpitas High School who fell in love with the logic of mathematics and wants every younger student to experience that same spark. As Co-Founder of Telos Tutoring, Neal leads curriculum design and math acceleration programming.",
     },
   ],
   recruitment: {
