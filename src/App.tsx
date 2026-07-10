@@ -38,8 +38,8 @@ function SponsorsPage() {
           </div>
           <p className="text-muted-foreground/60 text-sm mt-8 max-w-sm mx-auto leading-relaxed">
             Interested in sponsoring? Reach out to us at{" "}
-            <a href="mailto:telostutoring@outlook.com" className="text-primary hover:underline">
-              telostutoring@outlook.com
+            <a href="mailto:hello@telost.org" className="text-primary hover:underline">
+              hello@telost.org / telostutoring@outlook.com
             </a>
           </p>
         </div>
@@ -116,7 +116,7 @@ const PRIVACY_CONTENT = [
   "We collect only the information you provide through our sign-up forms — name, grade, subjects, and contact details. This information is used solely to match students with tutors and to communicate about scheduling.",
   "We do not sell, share, or distribute your personal information to third parties. All data is stored securely and accessed only by Telos Tutoring administrators for the purpose of coordinating tutoring sessions.",
   "Our website uses Microsoft Clarity to understand how visitors interact with our site. Clarity collects anonymized usage data (clicks, scrolling, page navigation) to help us improve the experience. No personally identifiable information is collected through Clarity.",
-  "If you have questions about this policy, contact us at telostutoring@outlook.com.",
+  "If you have questions about this policy, contact us at hello@telost.org / telostutoring@outlook.com.",
 ]
 
 const TERMS_CONTENT = [
