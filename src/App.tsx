@@ -19,7 +19,7 @@ import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
 function SponsorsPage() {
   return (
     <>
-      <Helmet title="Sponsors – Telos Tutoring" description="Support Telos Tutoring's free AI-powered tutoring platform. Sponsor our mission to provide world-class education to every student, regardless of income." />
+      <Helmet title="Sponsors – Telos Tutoring" description="Partner with Telos Tutoring to expand free, AI-powered education. Sponsor our mission to put an always-on tutor in every student's hands — measurable impact, zero cost to families." />
       <Navbar />
       <main className="min-h-screen flex items-center justify-center px-8">
         <div className="text-center max-w-lg">
@@ -30,7 +30,7 @@ function SponsorsPage() {
             Sponsors
           </h1>
           <p className="text-muted-foreground text-lg leading-relaxed mb-2">
-            We're building something meaningful — free AI-powered tutoring for every student in America.
+            We're building the future of free education — an AI tutor in every student's pocket, available 24/7 at zero cost. Partner with us to expand access across the Bay Area and beyond.
           </p>
           <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-6 py-3 mt-4">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -73,7 +73,7 @@ function Scene3D({ children }: { children: React.ReactNode }) {
 function HomePage() {
   return (
     <>
-      <Helmet title="Telos Tutoring – Free AI-Powered Tutoring for Algebra I" description="Telos (τέλος) means purpose. Our AI tutor delivers personalized, Socratic instruction for Algebra I. Free for every student, on-demand, like a human with their camera off." />
+      <Helmet title="Telos Tutoring – Free AI Tutoring for Every Student" description="Telos (τέλος) means purpose. We're a free, AI-powered tutoring nonprofit helping K-8 students discover theirs — available 24/7, on-demand, and built by students at Milpitas High School." />
       <Navbar />
       <main>
         <Hero />

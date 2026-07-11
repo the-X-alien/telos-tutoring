@@ -1,7 +1,8 @@
 export const NAV = {
   links: [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
+    { label: "Philosophy", href: "#philosophy" },
+    { label: "Subjects", href: "#subjects" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Team", href: "#team" },
     { label: "Guides", href: "/guide" },
@@ -12,14 +13,14 @@ export const NAV = {
 }
 
 export const HERO = {
-  badge: "AI-Powered Tutoring \u00b7 Free \u00b7 On-Demand",
-  headingLine1: "Your personal AI tutor",
-  headingAccent: "on demand.",
-  headingLine2: "Like a human, but always available.",
+  badge: "Free AI Tutoring \u00b7 Always On",
+  headingLine1: "Every student has a",
+  headingAccent: "purpose.",
+  headingLine2: "We help them find it.",
   subtitle:
-    "Telos (\u03c4\u03ad\u03bb\u03bf\u03c2) has reimagined what a tutor can be. Powered by AI, built by educators, and completely free for every student. Just like a conversation with someone who never forgets what you need.",
-  ctaPrimary: "Try It Free",
-  ctaSecondary: "How It Works",
+    'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2) \u2014 Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student where they are and helps them grow into who they\u2019re meant to become.',
+  ctaPrimary: "Begin Your Journey",
+  ctaSecondary: "Learn More",
 }
 
 export const PHILOSOPHY = {
@@ -27,103 +28,109 @@ export const PHILOSOPHY = {
   heading: "What is *telos?*",
   body: [
     "In ancient Greek philosophy, telos (\u03c4\u03ad\u03bb\u03bf\u03c2) means the ultimate purpose or end goal of something \u2014 the reason it exists. Aristotle believed that everything in nature carries a telos within it. An acorn\u2019s telos is to become an oak tree. A student\u2019s telos is to grow into their fullest potential.",
-    "Telos Tutoring brings that same idea to education. We've built an AI tutor that adapts to each student's unique needs \u2014 never rushing, never judging, always ready. It feels like working with a human who has their camera off: patient, focused, and completely present.",
+    "At Telos Tutoring, we don\u2019t just help kids pass tests. We help them discover what they\u2019re capable of becoming. Because education isn\u2019t about filling a vessel \u2014 it\u2019s about lighting a fire.",
   ],
   quote:
-    "The only true wisdom is in knowing you know nothing.",
-  quoteAttribution: "\u2014 Socrates",
+    "Every art and every inquiry, and similarly every action and every pursuit, is thought to aim at some good.",
+  quoteAttribution: "\u2014 Aristotle, Nicomachean Ethics",
 }
 
 export const SCROLL_REVEAL_TEXT =
-  "Our AI tutor doesn't just give answers. It listens, guides, adapts, and teaches. Built on the same Socratic method that has shaped critical thinking for millennia. Every student deserves a tutor who meets them where they are \u2014 and helps them get where they want to go."
+  "We believe that every student carries something extraordinary inside them. Our role is not to fill their minds with answers, but to help them uncover the questions that unlock who they are meant to become."
 
 export const SUBJECTS = {
   label: "WHAT WE TEACH",
-  heading: "Master Algebra I with *AI.*",
+  heading: "Built around how students actually *learn.*",
   subtitle:
-    "We focus on Algebra I \u2014 the gateway to advanced math. Our AI tutor adapts to your pace, fills gaps, and accelerates your understanding. Every session is one-on-one, personalized, and free.",
+    "We focus on acceleration \u2014 not just catching up, but getting ahead. Every subject is taught by peer tutors who recently mastered the same material and remember exactly where it gets confusing.",
   items: [
     {
       icon: "Compass",
-      title: "Algebra I",
+      title: "Mathematics",
       description:
-        "From variables and expressions to quadratic equations and systems. Our AI builds conceptual understanding step by step, adapting to your unique learning style.",
+        "From arithmetic fundamentals to pre-algebra and beyond. Our focus is acceleration \u2014 helping students build confidence and get ahead of their grade level, not just survive it.",
       tags: [
-        "Expressions",
-        "Equations",
-        "Functions",
-        "Graphing",
-        "Quadratics",
+        "Arithmetic",
+        "Pre-Algebra",
+        "Algebra",
+        "Geometry",
+        "Competition Prep",
       ],
     },
     {
       icon: "FlaskConical",
-      title: "Foundations",
+      title: "Science",
       description:
-        "Not ready for Algebra yet? The AI automatically identifies gaps in arithmetic, fractions, and pre-algebra, then fills them before moving forward.",
-      tags: ["Arithmetic", "Fractions", "Decimals", "Ratios", "Integers"],
+        'Hands-on conceptual understanding across all branches. We make the invisible visible \u2014 helping students see the "why" behind every reaction, force, and system.',
+      tags: ["Earth Science", "Life Science", "Physical Science", "Lab Skills"],
     },
     {
       icon: "BookOpen",
-      title: "Test Prep",
+      title: "English",
       description:
-        "Prepare for assessments with an AI that knows exactly what you struggle with. Practice problems, step-by-step walkthroughs, and instant feedback.",
-      tags: ["Quizzes", "Review", "Practice", "Feedback", "Progress"],
+        "Reading comprehension, writing structure, grammar, and critical thinking. We help students find their voice on the page and build the skills that carry across every subject.",
+      tags: [
+        "Reading",
+        "Writing",
+        "Grammar",
+        "Vocabulary",
+        "Comprehension",
+      ],
     },
     {
       icon: "Landmark",
-      title: "Critical Thinking",
+      title: "History",
       description:
-        "Beyond formulas \u2014 the AI teaches you how to think. Pattern recognition, logical reasoning, and problem-solving strategies that apply across every subject.",
-      tags: ["Logic", "Patterns", "Reasoning", "Strategy", "Application"],
+        "From ancient civilizations to American history. We teach students to think like historians \u2014 analyzing cause and effect, understanding context, and connecting the past to the present.",
+      tags: ["World History", "U.S. History", "Geography", "Civics"],
     },
   ],
 }
 
 export const HOW_IT_WORKS = {
   label: "HOW IT WORKS",
-  heading: "Start learning in *seconds.*",
+  heading: "Simple by design. *Powerful* by purpose.",
   subtitle:
-    "No scheduling. No waiting. No fees. Just open a session and start talking to your AI tutor.",
+    "Getting started takes less than five minutes. No contracts, no fees, no catch. Just students helping students.",
   steps: [
     {
       number: "01",
-      title: "Sign Up Free",
+      title: "Sign Up",
       description:
-        "Create your account in under a minute. No credit card, no commitment \u2014 just a name, grade, and what you want to learn.",
+        "Fill out a short registration form. Tell us your student's name, grade, subjects, and availability. That's it.",
     },
     {
       number: "02",
-      title: "Start a Session",
+      title: "Get Matched",
       description:
-        "Click \"Start Learning\" and you're instantly connected to your AI tutor. It feels like a video call \u2014 ask questions, get explanations, work through problems in real time.",
+        "We pair your student with a trained high school tutor who specializes in their subject and fits their schedule.",
     },
     {
       number: "03",
-      title: "Get Personal Attention",
+      title: "Start Learning",
       description:
-        "The AI remembers every session. It knows what you've mastered, where you struggle, and adapts each lesson to fill those gaps without repeating what you already know.",
+        "Sessions happen online via Zoom or in person at the Milpitas Library. One-on-one or small groups \u2014 whatever works best.",
     },
     {
       number: "04",
-      title: "Grow at Your Pace",
+      title: "Grow",
       description:
-        "Practice as much as you want. The AI is available 24/7 \u2014 no appointments, no limits. Go from confused to confident on your own schedule.",
+        "Track progress over time. Our tutors adapt to each student's pace, filling gaps and accelerating ahead when they're ready.",
     },
   ],
 }
 
 export const STATS = {
   label: "IMPACT",
-  heading: "Built for *everyone.*",
+  heading: "The numbers behind the *purpose.*",
   items: [
+    { number: 100, suffix: "+", label: "Students Served" },
+    { number: 30, suffix: "+", label: "Volunteer Tutors" },
+    { number: 500, suffix: "+", label: "Hours of Free Tutoring" },
     { number: 100, suffix: "%", label: "Free, Always" },
-    { number: 24, suffix: "/7", label: "Availability" },
-    { number: 1, suffix: "M+", label: "Problems Solved" },
-    { number: 0, suffix: "", label: "Ads, Ever" },
   ],
   founderQuote:
-    "We built Telos because we believe every child deserves the world's best education \u2014 not just the ones who can afford it. Our AI tutor delivers personalized, Socratic instruction to anyone with an internet connection, completely free.",
+    "We started Telos Tutoring because we remembered what it felt like to be stuck on a math problem with no one to ask. Every student deserves someone in their corner \u2014 someone who recently learned it themselves and can explain it in a way that clicks.",
   founderAttribution: "\u2014 Dhiaan Dave & Neal Panuganti, Co-Founders of Telos Tutoring",
 }
 
@@ -131,19 +138,19 @@ export const TEAM = {
   label: "THE TEAM",
   heading: "Built by students, *for students.*",
   subtitle:
-    "Telos Tutoring was founded by two high school students at Milpitas High School who believe that every child deserves access to a world-class education, regardless of their family's income.",
+    "Telos Tutoring was founded by two high school students at Milpitas High School who believe that the best person to explain a concept is someone who just learned it themselves.",
   founders: [
     {
       name: "Dhiaan Dave",
       title: "Co-Founder",
       initials: "DD",
-      bio: "A student at Milpitas High School who organizes hackathons through Wolverine Hacks, builds projects with Python and React, and believes the best way to learn is to build something real. As Co-Founder of Telos Tutoring, Dhiaan leads engineering and product direction.",
+      bio: "A student at Milpitas High School who organizes hackathons through Wolverine Hacks, builds projects with Python and React, and believes the best way to learn is to build something real. As Co-Founder of Telos Tutoring, Dhiaan leads community outreach and tutor coordination.",
     },
     {
       name: "Neal Panuganti",
       title: "Co-Founder",
       initials: "NP",
-      bio: "A student at Milpitas High School who fell in love with the logic of mathematics and wants every student to experience that same spark. As Co-Founder of Telos Tutoring, Neal leads curriculum design and educational philosophy.",
+      bio: "A student at Milpitas High School who fell in love with the logic of mathematics and wants every younger student to experience that same spark. As Co-Founder of Telos Tutoring, Neal leads curriculum design and math acceleration programming.",
     },
   ],
   recruitment: {
@@ -158,67 +165,67 @@ export const FAQ_ITEMS = [
   {
     question: "Is Telos Tutoring really free?",
     answer:
-      "Yes. 100% free, always. There are no hidden fees, no subscriptions, no upsells. We're a student-led nonprofit building an AI tutor that every student can access regardless of their background.",
+      "Yes. 100% free, always. We're a volunteer-run nonprofit founded by high school students. There are no hidden fees, no upsells, no premium tiers. Every student gets the same quality of help regardless of background.",
   },
   {
-    question: "How is the AI tutor different from a human tutor?",
+    question: "Who are the tutors?",
     answer:
-      "Our AI tutor is available 24/7, never gets tired, and remembers everything you've learned. It adapts to your pace without judgement. It's like working with a patient human tutor who has their camera off \u2014 focused entirely on you, without any social pressure.",
-  },
-  {
-    question: "What if I get stuck?",
-    answer:
-      "That's exactly when the AI shines. It walks you through problems step-by-step, asks guiding questions (Socratic method), and never moves on until you truly understand. You can ask the same question a hundred different ways until it clicks.",
-  },
-  {
-    question: "Do I need to schedule sessions?",
-    answer:
-      "No. There's no scheduling, no waiting, no appointments. Open a session whenever you want \u2014 the AI tutor is always ready. Learn for 5 minutes or 5 hours, it's up to you.",
+      "Our tutors are high school students at Milpitas High School and the surrounding Bay Area who excel in their subjects. Every tutor goes through a screening process and is matched based on their strengths. The best part? They recently learned the same material your student is working on, so they remember exactly where it gets tricky.",
   },
   {
     question: "What ages and grades do you serve?",
     answer:
-      "We're currently focused on Algebra I, serving middle and high school students. You can start anytime, even if you're not yet in Algebra I \u2014 the AI will meet you where you are and fill in foundational gaps.",
+      "We currently serve students in grades K through 8. Whether your child needs help with basic arithmetic or is ready to accelerate into pre-algebra, we've got them covered.",
+  },
+  {
+    question: "How do sessions work?",
+    answer:
+      "Sessions are held online via Zoom or in person at the Milpitas Library (subject to room availability). Each session is typically 45 minutes to 1 hour. You'll be matched with a consistent tutor so they can build a real relationship with your student and track progress over time.",
+  },
+  {
+    question: "How often are sessions?",
+    answer:
+      "We recommend once or twice per week for the best results, but we're flexible. During summer, we run a more structured schedule. During the school year, we work around everyone's availability.",
   },
   {
     question: "Is this just for students who are struggling?",
     answer:
-      "Not at all. Our AI is great for students who want to get ahead, accelerate through material, or prepare for tests. Whether you're behind and need support or ahead and want to push further, the AI adapts to your level.",
+      "Not at all. Our core focus is actually acceleration \u2014 helping students who want to get ahead, not just catch up. Whether your child is behind and needs support or ahead and wants to push further, we tailor our approach to meet them where they are.",
   },
   {
     question: "What subjects do you offer?",
     answer:
-      "We currently focus on Algebra I and foundational math. As an AI-powered platform, we can rapidly expand to new subjects based on what students need.",
+      "Math (our primary focus, including acceleration and competition prep), Science, English, and History. Math is available year-round. Other subjects are available based on tutor availability.",
   },
   {
-    question: "How do I sign up?",
+    question: "How do I sign my child up?",
     answer:
-      "Click the 'Start Learning' button anywhere on this site. Create your account in under a minute, and you'll be learning with your AI tutor immediately.",
+      'Click the "Sign Up" button anywhere on this site. You\'ll fill out a short Google Form with your student\'s info, and we\'ll reach out within 48 hours to schedule your first session.',
   },
   {
     question: "Can I volunteer to help Telos?",
     answer:
-      "Yes! We're looking for volunteers to help with curriculum development, community outreach, finance management, and growth. If you believe in free education for everyone, there's a place for you. Check the 'Join Us' section to apply.",
+      "Yes! We're looking for volunteers to help with curriculum development, community outreach, finance management, and growth \u2014 not just tutoring. If you believe in free education for everyone, there's a place for you. Check the 'Join Us' section to apply.",
   },
   {
-    question: "Why did you build an AI tutor?",
+    question: "Do you offer tutoring during the school year?",
     answer:
-      "Because the best tutor in the world should be available to every student, not just those who can afford private lessons. AI lets us deliver personalized, one-on-one instruction at zero cost to students. We're proving that world-class education can be free.",
+      "We're currently running our summer program. We plan to expand into the school year based on tutor availability and demand. Follow us or check back for updates.",
   },
 ]
 
 export const CTA_SECTION = {
   label: "JOIN US",
-  heading: "Education should be *free.*",
+  heading: "Find your *telos.*",
   subtitle:
-    "Whether you want to learn with our AI tutor or help us build the future of education, your journey starts here.",
+    "Whether you're a student ready to grow or a tutor ready to give back, your journey starts here.",
   studentCard: {
     icon: "GraduationCap",
-    heading: "I Want to Learn",
+    heading: "I'm a Student",
     description:
-      "Start learning Algebra I with our AI tutor right now. No scheduling, no fees, no pressure. Just you and an AI that adapts to how you learn.",
-    cta: "Start Learning Free",
-    note: "Takes less than a minute",
+      "Sign up for free tutoring sessions in Math, Science, English, or History. Online or in person in Milpitas. We'll match you with a tutor within 48 hours.",
+    cta: "Sign Up for Tutoring",
+    note: "Takes less than 2 minutes",
   },
   tutorCard: {
     icon: "Heart",
@@ -228,5 +235,5 @@ export const CTA_SECTION = {
     cta: "Apply to Join",
     note: "High school & college students welcome",
   },
-  trustLine: "No fees. No ads. No catch. Just the world's best education, free for everyone.",
+  trustLine: "No fees. No contracts. No catch. Just students helping students.",
 }
