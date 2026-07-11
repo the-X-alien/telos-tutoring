@@ -129,9 +129,9 @@ const TERMS_CONTENT = [
 ]
 
 const IP_RIGHTS_CONTENT = [
-  "All intellectual property relating to Telos Tutoring and the Telos AI tutor (\"Kai\") — including the name \"Telos\" (τέλος), the brand, logo, visual identity, website, marketing materials, curriculum, code, designs, and all associated content — is owned by Dhiaan Dave and the Telos team, unless otherwise stated.",
-  "The Telos name, logo, branding, and visual identity are protected and may not be copied, reproduced, modified, or used in any way without the prior written permission of Dhiaan Dave and the Telos team.",
-  "All software, source code, and technical systems that power Telos Tutoring and the Kai AI tutor are the intellectual property of Dhiaan Dave and the Telos team, and are protected by applicable copyright and intellectual property laws.",
+  "All intellectual property relating to Telos Tutoring and the Telos AI tutor (\"Kai\") — including the name \"Telos\" (τέλος), the brand, logo, visual identity, website, marketing materials, curriculum, code, designs, and all associated content — is owned by Dhiaan Dave, unless otherwise stated.",
+  "The Telos name, logo, branding, and visual identity are protected and may not be copied, reproduced, modified, or used in any way without the prior written permission of Dhiaan Dave.",
+  "All software, source code, and technical systems that power Telos Tutoring and the Kai AI tutor are the intellectual property of Dhiaan Dave, and are protected by applicable copyright and intellectual property laws.",
   "Third-party tools, APIs, and open-source libraries used in the service remain the property of their respective owners and are used in accordance with their own licenses.",
   "If you would like to use any Telos branding, content, or materials, or have any questions about intellectual property and rights, please contact us at hello@telost.org / telostutoring@outlook.com.",
 ]

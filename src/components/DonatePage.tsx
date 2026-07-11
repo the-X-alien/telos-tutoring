@@ -38,20 +38,27 @@ export function DonatePage() {
           </p>
         </div>
 
-        <div className="text-center mt-10">
+        <div className="liquid-glass rounded-2xl p-2 max-w-[800px] mx-auto mt-12 overflow-hidden">
+          <iframe
+            src="https://hcb.hackclub.com/donations/start/telos"
+            title="Donate to Telos Tutoring via HCB"
+            className="w-full border-0 rounded-xl"
+            style={{ height: "640px" }}
+            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          />
+        </div>
+        <p className="text-xs text-muted-foreground text-center mt-3">
+          Secure donation via HCB.{" "}
           <a
             href="https://hcb.hackclub.com/donations/start/telos"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3.5 rounded-full text-lg font-medium gold-glow hover:scale-[1.03] transition-transform duration-200"
+            className="text-primary hover:underline"
           >
-            <Heart size={18} />
-            Donate Now
-          </a>
-          <p className="text-xs text-muted-foreground mt-3">
-            Secure donation via HCB. You'll be redirected to complete your gift.
-          </p>
-        </div>
+            Open in a new tab
+          </a>{" "}
+          if the form doesn't load.
+        </p>
 
         <div className="max-w-[800px] mx-auto space-y-4 text-sm text-muted-foreground mt-12">
           <h2 className="text-foreground font-medium text-base">Why donate?</h2>

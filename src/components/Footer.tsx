@@ -136,8 +136,7 @@ export function Footer() {
           </p>
           <p className="text-muted-foreground/50 text-xs">
             <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</a> &middot;{" "}
-            <a href="/terms" className="hover:text-foreground transition-colors">Terms</a> &middot;{" "}
-            <a href="/ip" className="hover:text-foreground transition-colors">IP &amp; Rights</a>
+            <a href="/terms" className="hover:text-foreground transition-colors">Terms</a>
           </p>
         </div>
       </div>
