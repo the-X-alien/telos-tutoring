@@ -7,6 +7,7 @@ export const NAV = {
     { label: "Team", href: "#team" },
     { label: "Guides", href: "/guide" },
     { label: "Sponsors", href: "/sponsors" },
+    { label: "Donate", href: "/donate" },
     { label: "Join Us", href: "#join" },
   ],
   cta: "Start Learning",
@@ -15,7 +16,7 @@ export const NAV = {
 export const HERO = {
   messages: [
     {
-      line1: "Every student has a",
+      line1: "Every student has",
       accent: "talent.",
       line2: "We help them find it.",
     },

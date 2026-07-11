@@ -15,6 +15,7 @@ import { CTA } from "./components/CTA"
 import { Footer } from "./components/Footer"
 import { Helmet } from "./components/Helmet"
 import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
+import { DonatePage } from "./components/DonatePage"
 
 function SponsorsPage() {
   return (
@@ -136,6 +137,7 @@ export default function App() {
         <Route path="/guide/category/:categorySlug" element={<CategoryPage />} />
         <Route path="/guide/:slug" element={<GuidePage />} />
         <Route path="/sponsors" element={<SponsorsPage />} />
+        <Route path="/donate" element={<DonatePage />} />
         <Route path="/privacy" element={<LegalPage title="Privacy Policy" content={PRIVACY_CONTENT} />} />
         <Route path="/terms" element={<LegalPage title="Terms of Service" content={TERMS_CONTENT} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
