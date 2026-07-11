@@ -16,7 +16,6 @@ import { Footer } from "./components/Footer"
 import { Helmet } from "./components/Helmet"
 import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
 import { DonatePage } from "./components/DonatePage"
-import { ConsentBanner } from "./components/ConsentBanner"
 
 function SponsorsPage() {
   return (
@@ -158,7 +157,6 @@ export default function App() {
   return (
     <div className="bg-background text-foreground min-h-screen font-body" style={{ perspective: "1200px" }}>
       <ScrollManager />
-      <ConsentBanner />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/guide" element={<GuideIndex />} />
