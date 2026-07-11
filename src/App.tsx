@@ -128,6 +128,14 @@ const TERMS_CONTENT = [
   "We reserve the right to modify or discontinue services at any time. We also reserve the right to update these terms. Continued use of our services after changes constitutes acceptance of the new terms.",
 ]
 
+const IP_RIGHTS_CONTENT = [
+  "All intellectual property relating to Telos Tutoring and the Telos AI tutor (\"Kai\") — including the name \"Telos\" (τέλος), the brand, logo, visual identity, website, marketing materials, curriculum, code, designs, and all associated content — is owned by Dhiaan Dave and the Telos team, unless otherwise stated.",
+  "The Telos name, logo, branding, and visual identity are protected and may not be copied, reproduced, modified, or used in any way without the prior written permission of Dhiaan Dave and the Telos team.",
+  "All software, source code, and technical systems that power Telos Tutoring and the Kai AI tutor are the intellectual property of Dhiaan Dave and the Telos team, and are protected by applicable copyright and intellectual property laws.",
+  "Third-party tools, APIs, and open-source libraries used in the service remain the property of their respective owners and are used in accordance with their own licenses.",
+  "If you would like to use any Telos branding, content, or materials, or have any questions about intellectual property and rights, please contact us at hello@telost.org / telostutoring@outlook.com.",
+]
+
 export default function App() {
   return (
     <div className="bg-background text-foreground min-h-screen font-body" style={{ perspective: "1200px" }}>
@@ -140,6 +148,7 @@ export default function App() {
         <Route path="/donate" element={<DonatePage />} />
         <Route path="/privacy" element={<LegalPage title="Privacy Policy" content={PRIVACY_CONTENT} />} />
         <Route path="/terms" element={<LegalPage title="Terms of Service" content={TERMS_CONTENT} />} />
+        <Route path="/ip" element={<LegalPage title="Intellectual Property & Rights" content={IP_RIGHTS_CONTENT} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <SpeedInsights />
