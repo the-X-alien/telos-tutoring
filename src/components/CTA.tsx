@@ -62,9 +62,7 @@ export function CTA() {
               {CTA_SECTION.studentCard.description}
             </p>
             <a
-              href={LINKS.studentForm}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://telos-kairos.vercel.app/auth/signup"
               className="inline-block bg-primary text-primary-foreground rounded-full px-8 py-3.5 text-sm font-medium gold-glow hover:scale-[1.03] transition-transform duration-200"
             >
               {CTA_SECTION.studentCard.cta}

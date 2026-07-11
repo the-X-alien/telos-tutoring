@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Heart, Clock, Trophy } from "lucide-react"
+import { Heart, BookOpen, TrendingUp } from "lucide-react"
 import { TEAM } from "../lib/content"
 import { fadeUp, staggerContainer, staggerChild } from "../lib/animations"
 import { SectionLabel } from "./ui/SectionLabel"
@@ -80,16 +80,16 @@ export function Team() {
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
-                Service Hours
+                <BookOpen className="w-4 h-4 text-primary" />
+                Curriculum
               </span>
               <span className="flex items-center gap-2">
-                <Trophy className="w-4 h-4 text-primary" />
-                Leadership
+                <TrendingUp className="w-4 h-4 text-primary" />
+                Growth
               </span>
               <span className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-primary" />
-                Mentorship
+                Finance
               </span>
             </div>
             <div className="mt-10">

@@ -93,7 +93,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#philosophy"
+              href="#about"
               className="liquid-glass text-muted-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
             >
               Learn
@@ -135,7 +135,7 @@ export function Navbar() {
             ))}
             <div className="flex gap-2 mt-2 pt-3 border-t border-white/10">
               <a
-                href="#philosophy"
+                href="#about"
                 className="flex-1 text-center liquid-glass text-muted-foreground text-sm font-medium px-4 py-2.5 rounded-full"
               >
                 Learn
