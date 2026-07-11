@@ -13,10 +13,28 @@ export const NAV = {
 }
 
 export const HERO = {
-  badge: "Free AI Tutoring \u00b7 Always On",
-  headingLine1: "Every student has a",
-  headingAccent: "purpose.",
-  headingLine2: "We help them find it.",
+  messages: [
+    {
+      line1: "Every student has a",
+      accent: "purpose.",
+      line2: "We help them find it.",
+    },
+    {
+      line1: "A human tutor, minus the",
+      accent: "wait.",
+      line2: "AI that's always on.",
+    },
+    {
+      line1: "AI tutoring that isn't",
+      accent: "slop.",
+      line2: "Real help, free, on-demand.",
+    },
+    {
+      line1: "Built by students, powered by",
+      accent: "AI.",
+      line2: "Free for every student.",
+    },
+  ],
   subtitle:
     'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2) \u2014 Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student where they are and helps them grow into who they\u2019re meant to become.',
   ctaPrimary: "Begin Your Journey",

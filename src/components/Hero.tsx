@@ -1,10 +1,18 @@
-import { useRef, useEffect } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef, useEffect, useState } from "react"
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ChevronDown } from "lucide-react"
 import { HERO } from "../lib/content"
 
 export function Hero() {
   const ref = useRef(null)
+  const [messageIndex, setMessageIndex] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setMessageIndex((i) => (i + 1) % HERO.messages.length)
+    }, 4000)
+    return () => clearInterval(id)
+  }, [])
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const { scrollYProgress } = useScroll({
@@ -96,19 +104,23 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          <div className="liquid-glass rounded-full px-4 py-1.5 text-xs tracking-[2px] uppercase text-muted-foreground inline-flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            {HERO.badge}
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-[-2px] leading-[0.93] text-foreground">
-            {HERO.headingLine1}{" "}
-            <em className="not-italic text-primary font-display italic">
-              {HERO.headingAccent}
-            </em>
-            <br />
-            {HERO.headingLine2}
-          </h1>
+          <AnimatePresence mode="wait">
+            <motion.h1
+              key={messageIndex}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-[-2px] leading-[0.93] text-foreground"
+            >
+              {HERO.messages[messageIndex].line1}{" "}
+              <em className="not-italic text-primary font-display italic">
+                {HERO.messages[messageIndex].accent}
+              </em>
+              <br />
+              {HERO.messages[messageIndex].line2}
+            </motion.h1>
+          </AnimatePresence>
 
           <p className="text-muted-foreground text-base sm:text-lg max-w-xl mt-6 leading-relaxed">
             {HERO.subtitle}
