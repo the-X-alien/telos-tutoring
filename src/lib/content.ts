@@ -33,7 +33,7 @@ export const HERO = {
     {
       line1: "Built by students, powered by",
       accent: "AI.",
-      line2: "Free for every student.",
+      line2: "",
     },
   ],
   subtitle:
