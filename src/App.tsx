@@ -1,5 +1,5 @@
-import { useRef } from "react"
-import { Routes, Route, Navigate } from "react-router-dom"
+import { useRef, useEffect } from "react"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { useScroll, useTransform, motion } from "framer-motion"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Navbar } from "./components/Navbar"
@@ -136,9 +136,27 @@ const IP_RIGHTS_CONTENT = [
   "If you would like to use any Telos branding, content, or materials, or have any questions about intellectual property and rights, please contact us at hello@telost.org / telostutoring@outlook.com.",
 ]
 
+function ScrollManager() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      const id = hash.slice(1)
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
+        else window.scrollTo({ top: 0 })
+      })
+    } else {
+      window.scrollTo({ top: 0 })
+    }
+  }, [pathname, hash])
+  return null
+}
+
 export default function App() {
   return (
     <div className="bg-background text-foreground min-h-screen font-body" style={{ perspective: "1200px" }}>
+      <ScrollManager />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/guide" element={<GuideIndex />} />

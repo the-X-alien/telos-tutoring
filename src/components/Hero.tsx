@@ -104,7 +104,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-2xl ml-auto text-right"
         >
           <AnimatePresence mode="wait">
             <motion.h1
@@ -124,11 +124,11 @@ export function Hero() {
             </motion.h1>
           </AnimatePresence>
 
-          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mt-6 leading-relaxed">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mt-6 leading-relaxed text-right ml-auto">
             {HERO.subtitle}
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 mt-8">
+          <div className="flex flex-wrap items-center justify-end gap-3 mt-8">
             <a
               href="https://kairos.telost.org/auth/signup"
               target="_blank"

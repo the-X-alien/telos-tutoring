@@ -35,15 +35,19 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               {["Home", "Philosophy", "Subjects", "How It Works", "Team", "Join Us"].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    {link}
-                  </a>
-                )
+                (link) => {
+                  const slug = link.toLowerCase().replace(/\s+/g, "-")
+                  const href = link === "Home" ? "/" : `/#${slug}`
+                  return (
+                    <a
+                      key={link}
+                      href={href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
+                    >
+                      {link}
+                    </a>
+                  )
+                }
               )}
             </div>
           </div>

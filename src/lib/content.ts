@@ -1,13 +1,13 @@
 export const NAV = {
   links: [
-    { label: "Home", href: "#home" },
-    { label: "Philosophy", href: "#philosophy" },
-    { label: "Subjects", href: "#subjects" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Team", href: "#team" },
+    { label: "Home", href: "/" },
+    { label: "Philosophy", href: "/#philosophy" },
+    { label: "Subjects", href: "/#subjects" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Team", href: "/#team" },
     { label: "Sponsors", href: "/sponsors" },
     { label: "Donate", href: "/donate" },
-    { label: "Join Us", href: "#join" },
+    { label: "Join Us", href: "/#join" },
   ],
   cta: "Start Learning",
 }
@@ -20,7 +20,7 @@ export const HERO = {
       line2: "We help them find it.",
     },
     {
-      line1: "A human tutor, minus the",
+      line1: "A tutor, minus the",
       accent: "wait.",
       line2: "Always on, always free.",
     },
