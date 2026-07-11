@@ -16,18 +16,18 @@ export const HERO = {
   messages: [
     {
       line1: "Every student has a",
-      accent: "purpose.",
+      accent: "talent.",
       line2: "We help them find it.",
     },
     {
       line1: "A human tutor, minus the",
       accent: "wait.",
-      line2: "AI that's always on.",
+      line2: "Always on, always free.",
     },
     {
       line1: "AI tutoring that isn't",
       accent: "slop.",
-      line2: "Real help, free, on-demand.",
+      line2: "Real help, on-demand.",
     },
     {
       line1: "Built by students, powered by",

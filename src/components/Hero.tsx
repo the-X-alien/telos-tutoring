@@ -5,12 +5,14 @@ import { HERO } from "../lib/content"
 
 export function Hero() {
   const ref = useRef(null)
-  const [messageIndex, setMessageIndex] = useState(0)
+  const [messageIndex, setMessageIndex] = useState(() =>
+    Math.floor(Math.random() * HERO.messages.length)
+  )
 
   useEffect(() => {
     const id = setInterval(() => {
       setMessageIndex((i) => (i + 1) % HERO.messages.length)
-    }, 4000)
+    }, 8000)
     return () => clearInterval(id)
   }, [])
   const videoRef = useRef<HTMLVideoElement | null>(null)
