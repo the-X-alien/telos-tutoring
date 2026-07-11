@@ -41,7 +41,7 @@ export const HERO = {
     },
   ],
   subtitle:
-    'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2) \u2014 Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student where they are and helps them grow into who they\u2019re meant to become.',
+    'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2), Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student where they are and helps them grow into who they\u2019re meant to become.',
   ctaPrimary: "Begin Your Journey",
   ctaSecondary: "Learn More",
 }
