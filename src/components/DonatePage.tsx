@@ -47,18 +47,6 @@ export function DonatePage() {
             sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
           />
         </div>
-        <p className="text-xs text-muted-foreground text-center mt-3">
-          Secure donation via HCB.{" "}
-          <a
-            href="https://hcb.hackclub.com/donations/start/telos"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            Open in a new tab
-          </a>{" "}
-          if the form doesn't load.
-        </p>
 
         <div className="max-w-[800px] mx-auto space-y-4 text-sm text-muted-foreground mt-12">
           <h2 className="text-foreground font-medium text-base">Why donate?</h2>
