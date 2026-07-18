@@ -12,7 +12,7 @@ function NavLink({ label, href, onClick }: { label: string; href: string; onClic
       className={`px-3 py-1.5 rounded-full text-sm transition-all duration-200 font-body font-medium ${
         isHome
           ? "bg-telos-accent text-white"
-          : "text-telos-muted hover:text-telos-fg"
+          : "text-white hover:text-white/80"
       }`}
     >
       {label}
@@ -80,7 +80,7 @@ export function Navbar() {
                 className={`px-4 py-3 rounded-xl text-sm font-body font-medium transition-colors ${
                   link.label === "Home"
                     ? "bg-telos-accent/10 text-telos-accent"
-                    : "text-telos-muted hover:bg-black/5 hover:text-telos-fg"
+                    : "text-white hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {link.label}

@@ -12,7 +12,7 @@ export function Footer() {
             <a href="#home" className="telos-logo">
               <div className="telos-logo-mark">T</div>
               <span className="telos-logo-text">Telos</span>
-              <span className="telos-logo-sub hidden sm:inline">Tutoring</span>
+              <span className="telos-logo-sub hidden sm:inline" style={{ color: "#c4932a" }}>Tutoring</span>
             </a>
             <p className="text-telos-muted text-sm mt-3 font-body">
               Every student has a purpose.
@@ -28,15 +28,15 @@ export function Footer() {
               Navigate
             </h4>
             <div className="flex flex-col gap-2">
-              {["Home", "Philosophy", "Subjects", "How It Works", "Team", "Join Us"].map(
+{["Home", "Philosophy", "Subjects", "How It Works", "Team", "Sponsors", "Donate", "Join Us"].map(
                 (link) => {
                   const slug = link.toLowerCase().replace(/\s+/g, "-")
-                  const href = link === "Home" ? "/" : `/#${slug}`
+                  const href = link === "Home" ? "/" : link === "Sponsors" || link === "Donate" ? `/${slug}` : `/#${slug}`
                   return (
                     <a
                       key={link}
                       href={href}
-                      className="text-sm text-telos-muted hover:text-telos-fg transition-colors duration-300 font-body"
+                      className="text-sm text-white/70 hover:text-white transition-colors duration-300 font-body"
                     >
                       {link}
                     </a>
