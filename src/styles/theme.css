@@ -23,10 +23,6 @@
   50% { transform: rotate(1deg); }
 }
 
-@keyframes dash {
-  to { stroke-dashoffset: 0; }
-}
-
 .animate-fade-rise {
   animation: fade-rise 0.8s ease-out both;
 }
@@ -54,6 +50,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 /* Graph-paper body background */
@@ -70,16 +67,16 @@ body {
 .telos-surface {
   background-color: #fcfaf6;
   border-radius: 12px;
-  border: 1px solid rgba(43, 41, 38, 008);
+  border: 1px solid rgba(43, 41, 38, 0.08);
   box-shadow: 0 1px 3px rgba(43, 41, 38, 0.06), 0 4px 12px rgba(43, 41, 38, 0.04);
 }
 
-/* Nav */
+/* Nav — blend into graph-paper background */
 .telos-nav {
-  background: rgba(252, 250, 246, 0.85);
+  background: rgba(245, 242, 236, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(43, 41, 38, 0.08);
+  border-bottom: 1px solid rgba(43, 41, 38, 0.06);
 }
 
 /* Buttons */
@@ -87,10 +84,10 @@ body {
   background-color: #d1563c;
   color: #fcfaf6;
   border-radius: 9999px;
-  padding: 0.625rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -105,10 +102,10 @@ body {
   color: #2b2926;
   border: 1px solid rgba(43, 41, 38, 0.15);
   border-radius: 9999px;
-  padding: 0.625rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
@@ -125,17 +122,17 @@ body {
   gap: 0.375rem;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   font-family: 'Inter', sans-serif;
 }
 
-/* Marker/annotation */
+/* Marker/annotation — blue */
 .telos-marker {
   font-family: 'Caveat', cursive;
   font-weight: 600;
-  color: #4a9c6d;
+  color: #2563eb;
   position: relative;
   display: inline-block;
 }
@@ -146,7 +143,7 @@ body {
   left: 0;
   right: 0;
   height: 0.3em;
-  background: rgba(74, 156, 109, 0.2);
+  background: rgba(37, 99, 235, 0.15);
   border-radius: 2px;
   z-index: -1;
 }
@@ -155,7 +152,7 @@ body {
   font-family: 'Caveat', cursive;
   font-weight: 700;
   font-size: 1.1em;
-  color: #4a9c6d;
+  color: #2563eb;
   position: relative;
   display: inline-block;
 }
@@ -166,7 +163,7 @@ body {
   left: -2px;
   right: -2px;
   height: 0.45em;
-  background: rgba(74, 156, 109, 0.2);
+  background: rgba(37, 99, 235, 0.15);
   border-radius: 3px;
   z-index: -1;
 }
@@ -174,7 +171,7 @@ body {
 /* Section label / eyebrow */
 .telos-eyebrow {
   font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -197,14 +194,14 @@ body {
 }
 .telos-stat-number {
   font-family: 'Literata', serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #2b2926;
   line-height: 1;
 }
 .telos-stat-label {
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #6b6560;
   margin-top: 0.25rem;
   font-weight: 500;
@@ -214,11 +211,11 @@ body {
 .telos-sticky {
   background-color: #fef6d5;
   border-radius: 2px;
-  padding: 1rem 1.25rem;
+  padding: 0.875rem 1.1rem;
   box-shadow: 2px 3px 8px rgba(43, 41, 38, 0.12), 0 1px 3px rgba(43, 41, 38, 0.08);
   transform: rotate(-1deg);
   font-family: 'Caveat', cursive;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #2b2926;
 }
 .telos-sticky-rot1 { transform: rotate(-1.5deg); }
@@ -229,10 +226,10 @@ body {
 .telos-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
-/* Logo */
+/* Logo — yellow/gold */
 .telos-logo {
   display: flex;
   align-items: center;
@@ -240,29 +237,29 @@ body {
   text-decoration: none;
 }
 .telos-logo-mark {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  border: 2px solid #d1563c;
+  border: 2px solid #c4932a;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Literata', serif;
-  font-size: 0.875rem;
-  color: #d1563c;
+  font-size: 0.8rem;
+  color: #c4932a;
   font-weight: 700;
   flex-shrink: 0;
 }
 .telos-logo-text {
   font-family: 'Literata', serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #2b2926;
+  color: #c4932a;
   letter-spacing: -0.01em;
 }
 .telos-logo-sub {
   font-family: 'Literata', serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #8a8480;
   letter-spacing: -0.01em;
@@ -271,14 +268,14 @@ body {
 /* Page footer */
 .telos-pagefoot {
   border-top: 1px solid rgba(43, 41, 38, 0.08);
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
 
 /* Meta info text */
 .telos-meta {
   font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: #8a8480;
 }
 
@@ -291,9 +288,9 @@ body {
   padding: 0.25rem;
 }
 .telos-tab {
-  padding: 0.375rem 1rem;
+  padding: 0.3rem 0.875rem;
   border-radius: 9999px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #6b6560;
   transition: all 0.2s;
@@ -311,15 +308,15 @@ body {
   border-left: 3px solid #d1563c;
   padding-left: 1rem;
   font-family: 'Caveat', cursive;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: #6b6560;
   margin: 1rem 0;
 }
 
-/* Hero title */
+/* Hero title — base fg color, marker word gets blue via telos-marker */
 .telos-hero-title {
   font-family: 'Literata', serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -335,10 +332,10 @@ body {
   box-shadow: 0 4px 16px rgba(43, 41, 38, 0.1);
 }
 
-/* Scribble underline for links */
+/* Scribble underline for links — blue */
 .telos-scribble-link {
   text-decoration: none;
-  background-image: linear-gradient(#4a9c6d, #4a9c6d);
+  background-image: linear-gradient(#2563eb, #2563eb);
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 100% 0.3em;
@@ -348,18 +345,23 @@ body {
   background-size: 100% 0.6em;
 }
 
-/* List check */
+/* Gold headline text */
+.telos-gold {
+  color: #c4932a;
+}
+
+/* List check — blue */
 .telos-check {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
 }
 .telos-check-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: rgba(74, 156, 109, 0.15);
+  background: rgba(37, 99, 235, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
