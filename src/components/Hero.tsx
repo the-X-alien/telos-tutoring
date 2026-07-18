@@ -15,8 +15,7 @@ export function Hero() {
     }, 8000)
     return () => clearInterval(id)
   }, [])
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -26,57 +25,13 @@ export function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 120])
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
-  useEffect(() => {
-    const audio = audioRef.current
-    if (!audio) return
-
-    audio.volume = 0.15
-
-    const play = async () => {
-      audio.currentTime = 42
-      try {
-        await audio.play()
-        audio.muted = false
-      } catch {
-        audio.muted = true
-        audio.currentTime = 42
-        audio.play().catch(() => {})
-      }
-    }
-
-    if (audio.readyState >= 2) {
-      play()
-    } else {
-      audio.addEventListener("loadedmetadata", play, { once: true })
-    }
-
-    const onClick = () => {
-      audio.muted = false
-      audio.currentTime = 42
-      audio.play().catch(() => {})
-      document.removeEventListener("click", onClick)
-      document.removeEventListener("touchstart", onClick)
-    }
-    document.addEventListener("click", onClick)
-    document.addEventListener("touchstart", onClick)
-    return () => {
-      document.removeEventListener("click", onClick)
-      document.removeEventListener("touchstart", onClick)
-    }
-  }, [])
-
   return (
-    <section
-      id="home"
-      ref={ref}
-      className="relative min-h-screen w-full overflow-hidden"
-    >
+    <section id="home" ref={ref} className="relative min-h-screen w-full overflow-hidden">
       <motion.div
         className="absolute inset-0 z-0"
         style={{ scale: videoScale, opacity: videoOpacity }}
       >
         <video
-          ref={videoRef}
           autoPlay
           muted
           playsInline
@@ -87,24 +42,24 @@ export function Hero() {
         </video>
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-telos-bg via-telos-bg/60 to-telos-bg/20 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-telos-bg/40 to-transparent z-[1]" />
 
-      <div className="absolute top-1/3 -left-32 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] animate-pulse-gold z-[1]" />
+      <div className="absolute top-1/3 -left-32 w-[600px] h-[600px] bg-telos-accent/5 rounded-full blur-[150px] animate-pulse-gold z-[1]" />
       <div
-        className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-primary/4 rounded-full blur-[120px] animate-pulse-gold z-[1]"
+        className="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-telos-accent/4 rounded-full blur-[120px] animate-pulse-gold z-[1]"
         style={{ animationDelay: "1.5s" }}
       />
 
       <motion.div
-        className="absolute bottom-0 left-0 right-0 z-20 px-8 md:px-16 lg:px-28 pb-16 sm:pb-20 max-w-[1400px] mx-auto"
+        className="absolute bottom-0 left-0 right-0 z-20 px-8 md:px-16 lg:px-28 pb-16 sm:pb-20"
         style={{ y: contentY, opacity: contentOpacity }}
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-[1400px] mx-auto max-w-2xl"
         >
           <AnimatePresence mode="wait">
             <motion.h1
@@ -113,18 +68,28 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-normal tracking-[-2px] leading-[0.93] text-foreground"
+              className="telos-hero-title"
             >
               {HERO.messages[messageIndex].line1}{" "}
-              <em className="not-italic text-primary font-display italic">
+              <em className="not-italic telos-marker" style={{ fontStyle: "normal" }}>
                 {HERO.messages[messageIndex].accent}
               </em>
-              <br />
-              {HERO.messages[messageIndex].line2}
+              {HERO.messages[messageIndex].line2 && (
+                <>
+                  <br />
+                  {HERO.messages[messageIndex].line2}
+                </>
+              )}
             </motion.h1>
           </AnimatePresence>
 
-          <p className="text-muted-foreground text-base sm:text-lg max-w-xl mt-6 leading-relaxed">
+          <div className="flex items-center gap-3 mt-6">
+            <div className="telos-sticky telos-sticky-rot1">
+              Free K-8 tutoring, always.
+            </div>
+          </div>
+
+          <p className="text-telos-muted text-base sm:text-lg max-w-xl mt-8 leading-relaxed font-body">
             {HERO.subtitle}
           </p>
 
@@ -133,7 +98,7 @@ export function Hero() {
               href="https://kairos.telost.org/auth/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground rounded-full px-8 py-3.5 text-sm sm:text-base font-medium gold-glow hover:scale-[1.03] transition-transform duration-200"
+              className="telos-btn-primary"
             >
               {HERO.ctaPrimary}
             </a>
@@ -141,7 +106,7 @@ export function Hero() {
               href="https://kairos.telost.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-glass text-foreground text-sm sm:text-base font-medium px-8 py-3.5 rounded-full hover:text-primary transition-colors duration-200"
+              className="telos-btn-secondary"
             >
               {HERO.ctaSecondary}
             </a>
@@ -149,21 +114,11 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      <audio
-        ref={audioRef}
-        preload="auto"
-        loop
-        muted
-      >
-        <source src="/golden-hour-instrumental.m4a" type="audio/mp4" />
-        <source src="/golden-hour-instrumental.webm" type="audio/webm" />
-      </audio>
-
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
         style={{ opacity: contentOpacity }}
       >
-        <ChevronDown className="w-5 h-5 text-muted-foreground/40 animate-subtle-float" />
+        <ChevronDown className="w-5 h-5 text-telos-muted/40 animate-subtle-float" />
       </motion.div>
     </section>
   )

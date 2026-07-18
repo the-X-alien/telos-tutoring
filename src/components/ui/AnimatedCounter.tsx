@@ -30,12 +30,11 @@ export function AnimatedCounter({ target, suffix = "", label, className }: Anima
   }, [inView, target])
 
   return (
-    <div ref={ref} className={cn("text-center", className)}>
-      <div className="text-4xl md:text-5xl lg:text-6xl font-display text-primary tracking-tight leading-none">
-        {count}
-        {suffix}
+    <div ref={ref} className={cn("telos-stat", className)}>
+      <div className="telos-stat-number">
+        {count}{suffix}
       </div>
-      <div className="text-sm text-muted-foreground mt-3 font-body">{label}</div>
+      <div className="telos-stat-label">{label}</div>
     </div>
   )
 }

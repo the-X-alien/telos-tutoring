@@ -18,21 +18,21 @@ function FAQItem({
   onClick: () => void
 }) {
   return (
-    <div className="border-b border-border/20">
+    <div className="border-b border-telos-fg/10">
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between py-5 md:py-6 text-left focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+        className="w-full flex items-center justify-between py-5 md:py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-telos-accent focus-visible:ring-offset-2 focus-visible:ring-offset-telos-bg rounded-sm"
         aria-expanded={isOpen}
       >
         <span
-          className={`text-base md:text-lg font-medium transition-colors duration-300 pr-4 ${
-            isOpen ? "text-primary" : "text-foreground"
+          className={`text-base md:text-lg font-medium transition-colors duration-300 pr-4 font-display ${
+            isOpen ? "text-telos-accent" : "text-telos-fg"
           }`}
         >
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-muted-foreground shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-telos-muted shrink-0 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -46,7 +46,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <p className="text-muted-foreground text-sm md:text-base pb-6 leading-relaxed pr-8">
+            <p className="text-telos-muted text-sm md:text-base pb-6 leading-relaxed pr-8 font-body">
               {answer}
             </p>
           </motion.div>
@@ -60,7 +60,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
+    <section className="py-20 md:py-28 px-8 md:px-16 lg:px-28">
       <div className="max-w-[900px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text="QUESTIONS" />
@@ -70,7 +70,7 @@ export function FAQ() {
           />
           <motion.p
             {...fadeUp(0.2)}
-            className="text-muted-foreground text-base md:text-lg mt-8 leading-relaxed"
+            className="text-telos-muted text-base md:text-lg mt-8 leading-relaxed font-body"
           >
             If your question isn't answered here, reach out to us directly
             &mdash; we're always happy to help.
@@ -79,7 +79,7 @@ export function FAQ() {
 
         <motion.div
           {...staggerContainer}
-          className="mt-12"
+          className="mt-12 telos-surface rounded-2xl px-6 md:px-8"
         >
           {FAQ_ITEMS.map((item, i) => (
             <motion.div key={i} {...staggerChild}>

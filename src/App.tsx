@@ -24,22 +24,22 @@ function SponsorsPage() {
       <Navbar />
       <main className="min-h-screen flex items-center justify-center px-8">
         <div className="text-center max-w-lg">
-          <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center mx-auto mb-8">
-            <span className="text-2xl text-primary font-display">S</span>
+          <div className="w-16 h-16 rounded-full border-2 border-telos-accent/30 flex items-center justify-center mx-auto mb-8">
+            <span className="text-2xl text-telos-accent font-display">S</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-display text-foreground tracking-[-1px] mb-4">
+          <h1 className="text-4xl sm:text-5xl font-display text-telos-fg tracking-[-1px] mb-4">
             Sponsors
           </h1>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-2">
+          <p className="text-telos-muted text-lg leading-relaxed mb-2 font-body">
             We're building the future of free education — an AI tutor in every student's pocket, available 24/7 at zero cost. Partner with us to expand access across the Bay Area and beyond.
           </p>
-          <div className="inline-flex items-center gap-2 liquid-glass rounded-full px-6 py-3 mt-4">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-primary font-medium text-sm tracking-wide">Coming Soon</span>
+          <div className="inline-flex items-center gap-2 telos-surface rounded-full px-6 py-3 mt-4">
+            <span className="w-2 h-2 rounded-full bg-telos-accent animate-pulse" />
+            <span className="text-telos-accent font-medium text-sm tracking-wide font-body">Coming Soon</span>
           </div>
-          <p className="text-muted-foreground/60 text-sm mt-8 max-w-sm mx-auto leading-relaxed">
+          <p className="text-telos-muted/60 text-sm mt-8 max-w-sm mx-auto leading-relaxed font-body">
             Interested in sponsoring? Reach out to us at{" "}
-            <a href="mailto:hello@telost.org" className="text-primary hover:underline">
+            <a href="mailto:hello@telost.org" className="text-telos-accent hover:underline">
               hello@telost.org / telostutoring@outlook.com
             </a>
           </p>

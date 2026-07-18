@@ -21,7 +21,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function Subjects() {
   return (
-    <section id="subjects" className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
+    <section id="subjects" className="py-20 md:py-28 px-8 md:px-16 lg:px-28">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={SUBJECTS.label} />
@@ -31,7 +31,7 @@ export function Subjects() {
           />
           <motion.p
             {...fadeUp(0.2)}
-            className="text-muted-foreground text-base md:text-lg mt-8 leading-relaxed max-w-2xl"
+            className="text-telos-muted text-base md:text-lg mt-8 leading-relaxed max-w-2xl font-body"
           >
             {SUBJECTS.subtitle}
           </motion.p>
@@ -45,21 +45,21 @@ export function Subjects() {
             const Icon = iconMap[subject.icon]
             return (
               <motion.div key={subject.title} {...staggerChild}>
-                <LiquidGlassCard className="p-8 md:p-10 h-full flex flex-col group">
+                <LiquidGlassCard className="h-full flex flex-col group">
                   {Icon && (
-                    <Icon className="w-10 h-10 text-primary mb-6" />
+                    <Icon className="w-10 h-10 text-telos-accent mb-5" />
                   )}
-                  <h3 className="text-xl font-display text-foreground mb-4">
+                  <h3 className="text-xl font-display text-telos-fg mb-3">
                     {subject.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-8 flex-1">
+                  <p className="text-telos-muted text-sm leading-relaxed mb-6 flex-1 font-body">
                     {subject.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {subject.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs px-3 py-1 rounded-full bg-muted text-muted-foreground"
+                        className="text-xs px-3 py-1 rounded-full bg-telos-bg border border-telos-fg/10 text-telos-muted font-body font-medium"
                       >
                         {tag}
                       </span>

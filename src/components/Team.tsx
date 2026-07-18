@@ -10,7 +10,7 @@ import { LINKS } from "../lib/constants"
 
 export function Team() {
   return (
-    <section id="team" className="py-16 md:py-24 px-8 md:px-16 lg:px-28">
+    <section id="team" className="py-20 md:py-28 px-8 md:px-16 lg:px-28 telos-graph-section">
       <div className="max-w-[1400px] mx-auto">
         <div className="max-w-3xl">
           <SectionLabel text={TEAM.label} />
@@ -20,7 +20,7 @@ export function Team() {
           />
           <motion.p
             {...fadeUp(0.2)}
-            className="text-muted-foreground text-base md:text-lg mt-8 leading-relaxed max-w-2xl"
+            className="text-telos-muted text-base md:text-lg mt-8 leading-relaxed max-w-2xl font-body"
           >
             {TEAM.subtitle}
           </motion.p>
@@ -32,19 +32,19 @@ export function Team() {
         >
           {TEAM.founders.map((founder) => (
             <motion.div key={founder.name} {...staggerChild}>
-              <LiquidGlassCard className="p-8 md:p-10 text-center">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary/40 to-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-display text-primary">
+              <LiquidGlassCard className="text-center">
+                <div className="w-24 h-24 rounded-full bg-telos-accent/10 border-2 border-telos-accent/20 flex items-center justify-center mx-auto mb-5">
+                  <span className="text-2xl font-display text-telos-accent font-bold">
                     {founder.initials}
                   </span>
                 </div>
-                <h3 className="text-2xl font-display text-foreground">
+                <h3 className="text-2xl font-display text-telos-fg">
                   {founder.name === "Dhiaan Dave" ? (
                     <a
                       href={LINKS.linkedinDhiaan}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-telos-accent transition-colors"
                     >
                       {founder.name}
                     </a>
@@ -53,16 +53,16 @@ export function Team() {
                       href={LINKS.linkedinNeal}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-primary transition-colors"
+                      className="hover:text-telos-accent transition-colors"
                     >
                       {founder.name}
                     </a>
                   )}
                 </h3>
-                <p className="text-primary text-sm mt-1 font-body">
+                <p className="text-telos-accent text-sm mt-1 font-body font-medium">
                   {founder.title}
                 </p>
-                <p className="text-muted-foreground text-sm leading-relaxed mt-5">
+                <p className="text-telos-muted text-sm leading-relaxed mt-4 font-body">
                   {founder.bio}
                 </p>
               </LiquidGlassCard>
@@ -71,33 +71,33 @@ export function Team() {
         </motion.div>
 
         <motion.div {...fadeUp(0.3)} className="mt-10">
-          <LiquidGlassCard className="p-10 md:p-14 text-center" hover={false}>
-            <h3 className="text-2xl md:text-3xl font-display text-foreground">
+          <LiquidGlassCard className="text-center">
+            <h3 className="text-2xl md:text-3xl font-display text-telos-fg">
               {TEAM.recruitment.heading}
             </h3>
-            <p className="text-muted-foreground text-base max-w-2xl mx-auto mt-6 leading-relaxed">
+            <p className="text-telos-muted text-base max-w-2xl mx-auto mt-5 leading-relaxed font-body">
               {TEAM.recruitment.body}
             </p>
-            <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-6 mt-7 text-sm text-telos-muted font-body">
               <span className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4 text-primary" />
+                <BookOpen className="w-4 h-4 text-telos-accent" />
                 Curriculum
               </span>
               <span className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-primary" />
+                <TrendingUp className="w-4 h-4 text-telos-accent" />
                 Growth
               </span>
               <span className="flex items-center gap-2">
-                <Heart className="w-4 h-4 text-primary" />
+                <Heart className="w-4 h-4 text-telos-accent" />
                 Finance
               </span>
             </div>
-            <div className="mt-10">
+            <div className="mt-8">
               <GoldButton href={LINKS.tutorForm}>
                 {TEAM.recruitment.cta}
               </GoldButton>
             </div>
-            <p className="text-muted-foreground/50 text-xs mt-4">
+            <p className="text-telos-muted/50 text-xs mt-4 font-body">
               {TEAM.recruitment.note}
             </p>
           </LiquidGlassCard>

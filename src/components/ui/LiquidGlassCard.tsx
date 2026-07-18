@@ -29,7 +29,7 @@ export function LiquidGlassCard({
       const rect = el.getBoundingClientRect()
       const x = (e.clientX - rect.left) / rect.width - 0.5
       const y = (e.clientY - rect.top) / rect.height - 0.5
-      setTilt({ x: y * -8, y: x * 8 })
+      setTilt({ x: y * -6, y: x * 6 })
     },
     [hover]
   )
@@ -45,7 +45,7 @@ export function LiquidGlassCard({
       ref={ref as never}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={cn("liquid-glass rounded-2xl", className)}
+      className={cn("telos-surface rounded-2xl p-8 md:p-10", className)}
       style={{ transformStyle: "preserve-3d" }}
       animate={
         hover

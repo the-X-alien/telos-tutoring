@@ -10,13 +10,13 @@ interface GoldButtonProps {
 
 export function GoldButton({ children, href, className, variant = "primary" }: GoldButtonProps) {
   const base =
-    "rounded-full px-8 py-3.5 text-sm font-medium transition-all duration-200 inline-flex items-center justify-center"
+    "rounded-full px-8 py-3.5 text-sm font-medium transition-all duration-200 inline-flex items-center justify-center font-body"
 
   const styles = cn(
     base,
     variant === "primary"
-      ? "bg-primary text-primary-foreground gold-glow"
-      : "liquid-glass text-foreground border border-primary/30 hover:border-primary/60",
+      ? "bg-telos-accent text-white hover:bg-telos-accent/90"
+      : "telos-surface text-telos-fg border border-telos-fg/10 hover:border-telos-accent/50 hover:text-telos-accent",
     className
   )
 

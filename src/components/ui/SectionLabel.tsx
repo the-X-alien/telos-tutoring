@@ -13,8 +13,8 @@ export function SectionLabel({ text, gold = true, delay = 0 }: SectionLabelProps
     <motion.div
       {...fadeUp(delay)}
       className={cn(
-        "text-xs tracking-[3px] uppercase mb-6 font-body",
-        gold ? "text-primary" : "text-muted-foreground"
+        "text-xs tracking-[3px] uppercase mb-6 font-body font-semibold",
+        gold ? "telos-eyebrow" : "text-telos-muted"
       )}
     >
       {text}
