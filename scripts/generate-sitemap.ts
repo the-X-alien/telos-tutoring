@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs"
 import { resolve } from "path"
 
-const BASE = "https://telostutoring.org"
+const BASE = "https://www.telost.org"
 const TODAY = new Date().toISOString().split("T")[0]
 
 const staticPages = [
@@ -30,5 +30,5 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 ${allPages.map((p) => `  <url>\n    <loc>${BASE}${p.loc}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>`).join("\n")}
 </urlset>`
 
-writeFileSync(resolve(__dirname, "../dist/sitemap.xml"), xml, "utf-8")
+writeFileSync(resolve(__dirname, "../public/sitemap.xml"), xml, "utf-8")
 console.log(`Sitemap generated: ${allPages.length} URLs`)

@@ -12,6 +12,8 @@ import { Stats } from "./components/Stats"
 import { Team } from "./components/Team"
 import { FAQ } from "./components/FAQ"
 import { CTA } from "./components/CTA"
+import { ReviewCarousel } from "./components/ReviewCarousel"
+import { CompetitorComparison } from "./components/CompetitorComparison"
 import { Footer } from "./components/Footer"
 import { Helmet } from "./components/Helmet"
 import { GuidePage, GuideIndex, CategoryPage } from "./components/GuidePage"
@@ -82,7 +84,9 @@ function HomePage() {
         <Scene3D><ScrollReveal /></Scene3D>
         <Scene3D><Subjects /></Scene3D>
         <Scene3D><HowItWorks /></Scene3D>
+        <Scene3D><CompetitorComparison /></Scene3D>
         <Scene3D><Stats /></Scene3D>
+        <Scene3D><ReviewCarousel /></Scene3D>
         <Scene3D><Team /></Scene3D>
         <Scene3D><FAQ /></Scene3D>
         <Scene3D><CTA /></Scene3D>

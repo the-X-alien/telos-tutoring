@@ -8,20 +8,20 @@ function SchemaMarkup({ page, slug }: { page: import("../lib/seo-data").SEOPage;
     "@type": page.schemaType,
     headline: page.h1,
     description: page.metaDescription,
-    url: `https://telostutoring.org/guide/${slug}`,
+    url: `https://www.telost.org/guide/${slug}`,
     datePublished: "2026-06-04",
     dateModified: "2026-06-04",
     author: {
       "@type": "Organization",
       name: "Telos Tutoring",
-      url: "https://telostutoring.org",
+      url: "https://www.telost.org",
     },
     publisher: {
       "@type": "Organization",
       name: "Telos Tutoring",
-      logo: { "@type": "ImageObject", url: "https://telostutoring.org/favicon.svg" },
+      logo: { "@type": "ImageObject", url: "https://www.telost.org/favicon.svg" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://telostutoring.org/guide/${slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.telost.org/guide/${slug}` },
   }
 
   if (page.faqs && page.faqs.length > 0) {
