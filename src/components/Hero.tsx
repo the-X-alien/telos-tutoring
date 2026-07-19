@@ -70,14 +70,14 @@ export function Hero() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="telos-hero-title"
             >
-              <span style={{ color: "#d1563c" }}>{HERO.messages[messageIndex].line1}</span>{" "}
+              <span style={{ color: "#ffffff" }}>{HERO.messages[messageIndex].line1}</span>{" "}
               <em className="not-italic telos-marker" style={{ fontStyle: "normal" }}>
                 {HERO.messages[messageIndex].accent}
               </em>
               {HERO.messages[messageIndex].line2 && (
                 <>
                   <br />
-                  <span style={{ color: "#d1563c" }}>{HERO.messages[messageIndex].line2}</span>
+                  <span style={{ color: "#ffffff" }}>{HERO.messages[messageIndex].line2}</span>
                 </>
               )}
             </motion.h1>
