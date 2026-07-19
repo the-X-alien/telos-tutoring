@@ -59,7 +59,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-[1400px] mx-auto max-w-2xl"
+          className="max-w-[1400px] mx-auto"
         >
           <AnimatePresence mode="wait">
             <motion.h1
@@ -89,7 +89,7 @@ export function Hero() {
             </div>
           </div>
 
-          <p className="text-telos-muted text-base sm:text-lg max-w-xl mt-8 leading-relaxed font-body">
+          <p className="text-telos-muted text-base sm:text-lg max-w-2xl mt-8 leading-relaxed font-body">
             {HERO.subtitle}
           </p>
 
