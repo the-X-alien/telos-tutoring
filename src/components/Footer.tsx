@@ -12,7 +12,7 @@ export function Footer() {
             <a href="#home" className="telos-logo">
               <div className="telos-logo-mark">T</div>
               <span className="telos-logo-text">Telos</span>
-              <span className="telos-logo-sub hidden sm:inline" style={{ color: "#c4932a" }}>Tutoring</span>
+              <span className="telos-logo-sub hidden sm:inline" style={{ color: "#c9952e" }}>Tutoring</span>
             </a>
             <p className="text-telos-muted text-sm mt-3 font-body">
               Every student has a purpose.
