@@ -71,7 +71,7 @@ export function Hero() {
               className="telos-hero-title"
             >
               {HERO.messages[messageIndex].line1}{" "}
-              <em className="not-italic telos-marker" style={{ fontStyle: "normal" }}>
+              <em className="not-italic telos-marker" style={{ fontStyle: "normal", color: "#c4932a" }}>
                 {HERO.messages[messageIndex].accent}
               </em>
               {HERO.messages[messageIndex].line2 && (

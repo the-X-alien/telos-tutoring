@@ -18,13 +18,13 @@ interface CompetitorRow {
 
 const ROWS: CompetitorRow[] = [
   { feature: "Completely Free", telos: "yes", rsm: "no", aops: "paid", mathnasium: "no", kumon: "no", khanAcademy: "yes", ck12: "yes", stellar: "paid" },
-  { feature: "1-on-1 Tutoring", telos: "yes", rsm: "yes", aops: "paid", mathnasium: "yes", kumon: "yes", khanAcademy: "no", ck12: "no", stellar: "yes" },
+  { feature: "Real Human Tutor", telos: "no", rsm: "yes", aops: "yes", mathnasium: "yes", kumon: "yes", khanAcademy: "no", ck12: "no", stellar: "no" },
   { feature: "AI-Powered", telos: "yes", rsm: "no", aops: "no", mathnasium: "no", kumon: "no", khanAcademy: "yes", ck12: "paid", stellar: "yes" },
-  { feature: "Available 24/7", telos: "yes", rsm: "no", aops: "limited", mathnasium: "no", kumon: "no", khanAcademy: "yes", ck12: "yes", stellar: "limited" },
-  { feature: "Adapts to Student", telos: "yes", rsm: "limited", aops: "limited", mathnasium: "yes", kumon: "limited", khanAcademy: "limited", ck12: "limited", stellar: "yes" },
+  { feature: "Available 24/7", telos: "yes", rsm: "no", aops: "no", mathnasium: "no", kumon: "no", khanAcademy: "yes", ck12: "yes", stellar: "limited" },
+  { feature: "Adapts to Student", telos: "yes", rsm: "yes", aops: "yes", mathnasium: "yes", kumon: "yes", khanAcademy: "limited", ck12: "limited", stellar: "yes" },
   { feature: "K–12 Coverage", telos: "yes", rsm: "yes", aops: "limited", mathnasium: "limited", kumon: "limited", khanAcademy: "yes", ck12: "yes", stellar: "yes" },
-  { feature: "Homework Help", telos: "yes", rsm: "limited", aops: "no", mathnasium: "limited", kumon: "no", khanAcademy: "limited", ck12: "yes", stellar: "limited" },
-  { feature: "Voice Conversations", telos: "yes", rsm: "no", aops: "no", mathnasium: "no", kumon: "no", khanAcademy: "no", ck12: "no", stellar: "paid" },
+  { feature: "Homework Help", telos: "yes", rsm: "yes", aops: "yes", mathnasium: "yes", kumon: "yes", khanAcademy: "limited", ck12: "yes", stellar: "limited" },
+  { feature: "Voice Conversations", telos: "yes", rsm: "yes", aops: "yes", mathnasium: "yes", kumon: "yes", khanAcademy: "no", ck12: "no", stellar: "paid" },
   { feature: "No Commitment", telos: "yes", rsm: "no", aops: "yes", mathnasium: "no", kumon: "no", khanAcademy: "yes", ck12: "yes", stellar: "limited" },
 ]
 
@@ -86,7 +86,9 @@ function ComparisonTable({ showTelos = true }: { showTelos?: boolean }) {
                   key === "telos" ? "text-telos-accent" : "text-telos-fg/60"
                 }`}
               >
-                {LABELS[key]}
+                {key === "stellar" ? (
+                  <a href="https://stellarlearning.app/" target="_blank" rel="noopener noreferrer" className="hover:underline">{LABELS[key]}</a>
+                ) : LABELS[key]}
               </th>
             ))}
           </tr>

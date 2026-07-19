@@ -1,10 +1,10 @@
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect, useCallback, type ReactNode } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { SectionLabel } from "./ui/SectionLabel"
 import { AccentHeading } from "./ui/AccentHeading"
 
 interface Review {
-  text: string
+  text: ReactNode
   name: string
   childAge: string
   formerService: string
@@ -18,7 +18,7 @@ const REVIEWS: Review[] = [
   { text: "RSM was $400/month and the homework was crushing my 6th grader. Telos is free and actually explains concepts in a way she understands.", name: "Michelle T.", childAge: "Grade 6", formerService: "RSM" },
   { text: "CK-12 is fine for review but it doesn't adapt when my daughter gets stuck. Kai patiently works through each step until she gets it.", name: "Carlos G.", childAge: "Grade 8", formerService: "CK-12" },
   { text: "Flexi was confusing for my 4th grader — the answers felt generic. Kai speaks to her at her level and makes it fun.", name: "Aisha W.", childAge: "Grade 4", formerService: "Flexi" },
-  { text: "Stellar's platform kept glitching and sessions would drop mid-lesson. Telos has been rock solid and my daughter's grades have never been better.", name: "Tom N.", childAge: "Grade 7", formerService: "Stellar" },
+  { text: <><a href="https://stellarlearning.app/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-telos-accent/40 hover:decoration-telos-accent">Stellar</a>'s platform kept glitching and sessions would drop mid-lesson. Telos has been rock solid and my daughter's grades have never been better.</>, name: "Tom N.", childAge: "Grade 7", formerService: "Stellar" },
   { text: "We were paying $300/month for 2 hours a week at a tutoring center. With Telos my son gets unlimited help anytime — and it's free.", name: "Lisa H.", childAge: "Grade 5", formerService: "Tutoring Center" },
   { text: "My daughter was falling behind in pre-algebra. A friend told us about Telos and within two weeks her test scores went from C to A.", name: "Raj P.", childAge: "Grade 8", formerService: "School Tutoring" },
   { text: "I was spending hours helping with homework I didn't understand myself. Kai explains things clearly to both of us.", name: "Jennifer B.", childAge: "Grade 3", formerService: "Self-taught" },
@@ -34,7 +34,7 @@ const REVIEWS: Review[] = [
   { text: "I was skeptical about an AI tutor at first, but Kai explains step-by-step better than some human tutors we've had.", name: "Alex R.", childAge: "Grade 4", formerService: "Human Tutors" },
   { text: "My 3rd grader needed help with word problems and nothing on YouTube quite clicked. Kai breaks it down in a way that makes sense to her.", name: "Heather J.", childAge: "Grade 3", formerService: "YouTube" },
   { text: "Flexi kept giving my son the same cookie-cutter explanations. Kai figures out what he doesn't understand and tries a different approach.", name: "Dan W.", childAge: "Grade 6", formerService: "Flexi" },
-  { text: "Stellar's pricing kept changing and they had hidden fees. Telos is completely transparent — zero dollars, zero catches.", name: "Rachel K.", childAge: "Grade 5", formerService: "Stellar" },
+  { text: <><a href="https://stellarlearning.app/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 decoration-telos-accent/40 hover:decoration-telos-accent">Stellar</a>'s pricing kept changing and they had hidden fees. Telos is completely transparent — zero dollars, zero catches.</>, name: "Rachel K.", childAge: "Grade 5", formerService: "Stellar" },
   { text: "After-school programs at school were cancelled. We needed something reliable and Telos has been a lifesaver for our family.", name: "Marcus T.", childAge: "Grade 4", formerService: "After-school Programs" },
   { text: "My daughter was embarrassed to ask questions in class. With Kai she can ask anything without judgment and her confidence has soared.", name: "Grace L.", childAge: "Grade 7", formerService: "Classroom Only" },
   { text: "RSM's curriculum was too rigid — when my son struggled with a concept they just pushed ahead. Kai slows down when he needs it.", name: "Andrew B.", childAge: "Grade 5", formerService: "RSM" },
