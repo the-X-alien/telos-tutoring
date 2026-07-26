@@ -41,7 +41,7 @@ export const HERO = {
     },
   ],
   subtitle:
-    'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2), Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student where they are and helps them grow into who they\u2019re meant to become.',
+    'Telos (\u03c4\u03ad\u03bb\u03bf\u03c2), Greek for "purpose." We pair that idea with modern AI: a free, always-on tutor that meets every student at their unique level and helps them grow into who they\u2019re meant to become.',
   ctaPrimary: "Begin Your Journey",
   ctaSecondary: "Learn More",
 }
@@ -50,8 +50,8 @@ export const PHILOSOPHY = {
   label: "THE PHILOSOPHY",
   heading: "What is *telos?*",
   body: [
-    "In ancient Greek philosophy, telos (\u03c4\u03ad\u03bb\u03bf\u03c2) means the ultimate purpose or end goal of something \u2014 the reason it exists. Aristotle believed that everything in nature carries a telos within it. An acorn\u2019s telos is to become an oak tree. A student\u2019s telos is to grow into their fullest potential.",
-    "At Telos Tutoring, we don\u2019t just help kids pass tests. We help them discover what they\u2019re capable of becoming. Because education isn\u2019t about filling a vessel \u2014 it\u2019s about lighting a fire.",
+    "In ancient Greek philosophy, telos (\u03c4\u03ad\u03bb\u03bf\u03c2) means the overarching purpose or end goal of something \u2014 the reason it exists. Aristotle believed that everything in nature carries a telos within it. An acorn\u2019s telos is to become an oak tree. A student\u2019s telos is to reach their fullest potential.",
+    "At Telos Tutoring, we don\u2019t just help kids pass tests with rote learning. We help them discover what they\u2019re capable of becoming. We inspire interest in learning, a lifetime spark. Because education isn\u2019t about filling a vessel \u2014 it\u2019s about lighting a fire.",
   ],
   quote:
     "Every art and every inquiry, and similarly every action and every pursuit, is thought to aim at some good.",
@@ -59,13 +59,13 @@ export const PHILOSOPHY = {
 }
 
 export const SCROLL_REVEAL_TEXT =
-  "We believe that every student carries something extraordinary inside them. Our role is not to fill their minds with answers, but to help them uncover the questions that unlock who they are meant to become."
+  "We believe that every student carries something extraordinary inside them. Our goal is to help instill a bright spark of creativity in their minds and open the path to the future."
 
 export const SUBJECTS = {
   label: "WHAT WE TEACH",
   heading: "Built around how students actually *learn.*",
   subtitle:
-    "We focus on acceleration \u2014 not just catching up, but getting ahead. Every subject is taught by peer tutors who recently mastered the same material and remember exactly where it gets confusing.",
+    "We focus on acceleration \u2014 not just catching up, but getting ahead and conceptualizing every topic. Every subject is taught by peer tutors who recently mastered the same material and remember exactly where it gets confusing.",
   items: [
     {
       icon: "Compass",
@@ -203,7 +203,7 @@ export const FAQ_ITEMS = [
   {
     question: "How do sessions work?",
     answer:
-      "Sessions are held online via Zoom or in person at the Milpitas Library (subject to room availability). Each session is typically 45 minutes to 1 hour. You'll be matched with a consistent tutor so they can build a real relationship with your student and track progress over time.",
+      "Sessions are held online via Zoom or in person at the Milpitas Library (subject to room availability). Each session is typically 45 minutes to 1 hour. You'll be matched with a consistent, experinced tutor so they can build a real relationship with your student and track progress over time.",
   },
   {
     question: "How often are sessions?",
@@ -228,7 +228,7 @@ export const FAQ_ITEMS = [
   {
     question: "Can I volunteer to help Telos?",
     answer:
-      "Yes! We're looking for volunteers to help with curriculum development, community outreach, finance management, and growth \u2014 not just tutoring. If you believe in free education for everyone, there's a place for you. Check the 'Join Us' section to apply.",
+      "Yes! We're looking for volunteers to help with curriculum development, community outreach, finance management, and growth \u2014 not just tutoring. Plus, volunteering at a tutoring organization is great proof of academic tenacity and community outreach. If you believe in free education for everyone, there's a place for you. Check the 'Join Us' section to apply.",
   },
   {
     question: "Do you offer tutoring during the school year?",
@@ -241,7 +241,7 @@ export const CTA_SECTION = {
   label: "JOIN US",
   heading: "Find your *telos.*",
   subtitle:
-    "Whether you're a student ready to grow or a tutor ready to give back, your journey starts here.",
+    "Whether you're a student ready to grow or a tutor ready to give back to the community, your journey starts here.",
   studentCard: {
     icon: "GraduationCap",
     heading: "I'm a Student",
@@ -254,7 +254,7 @@ export const CTA_SECTION = {
     icon: "Heart",
     heading: "I Want to Help",
     description:
-      "Join our team of volunteers building the future of free education. Help us write curriculum, manage finances, grow our reach, and make a real impact.",
+      "Join our team of volunteers building the future of free education. Help us write curriculums, manage finances, grow our reach, and make a real impact.",
     cta: "Apply to Join",
     note: "High school & college students welcome",
   },
